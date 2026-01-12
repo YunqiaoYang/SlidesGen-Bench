@@ -1,0 +1,24 @@
+{
+  "parameters": {
+    "weight_contrast": 7,
+    "weight_colorfulness": 9,
+    "weight_colorfulness_score": 0.65,
+    "w_colorfulness_mean": 17,
+    "w_colorfulness_std": 6,
+    "weight_colorfulness_pacing": 0.6,
+    "w_colorfulness_target": 9.5,
+    "w_colorfulness_target_std": 4,
+    "weight_harmony": 0.2,
+    "weight_harmony_mean": 5,
+    "weight_harmony_deck": 30,
+    "harmony_sigma": 0.0005,
+    "weight_subband_entropy": 0.1,
+    "weight_subband_entropy_score": 50,
+    "w_subband_entropy_mean": 4.9,
+    "w_subband_entropy_std": 1.5,
+    "weight_target_rmssd": 0.02,
+    "weight_target_halfwidth": 0.1,
+    "se_k": 1.7,
+    "se_mu": 2.6
+  }
+}
