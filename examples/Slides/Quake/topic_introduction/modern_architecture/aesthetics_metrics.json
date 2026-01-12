@@ -1,0 +1,1899 @@
+{
+  "num_slides": 31,
+  "slides": [
+    {
+      "figure_ground_contrast": {
+        "min": 0.20998006061183896,
+        "max": 1.0,
+        "mean": 0.7172262909189957
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.5541879035310455,
+        "template_distances": {
+          "i": 8.060699153710186,
+          "V": 4.415285030261381,
+          "L": 2.87192765195918,
+          "mirror_L": 3.3591748766210134,
+          "I": 3.3487537160684817,
+          "T": 1.5917267178433754,
+          "Y": 1.4325838113541738,
+          "X": 0.5541879035310455
+        }
+      },
+      "colorfulness": 26.868015476420066,
+      "subband_entropy": {
+        "subband_entropy": 2.9689514245539863,
+        "luminance_entropy": 3.3075740203030537,
+        "chrom_a_entropy": 1.235660549639976,
+        "chrom_b_entropy": 1.146705044102789,
+        "luminance_entropy_total": 46.30603628424275,
+        "chrom_a_entropy_total": 17.299247694959664,
+        "chrom_b_entropy_total": 16.053870617439046,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.04713702201843262,
+        "color_harmony": 3.7398219108581543,
+        "colorfulness": 0.032338857650756836,
+        "subband_entropy": 1.0901930332183838
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 0,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0001.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.0019448251206578076,
+        "template_distances": {
+          "i": 10.02303521420485,
+          "V": 5.518903890841923,
+          "L": 2.9630735863671585,
+          "mirror_L": 2.8547906810462975,
+          "I": 0.2091473514866234,
+          "T": 0.40909015074778055,
+          "Y": 0.04735506166954656,
+          "X": 0.0019448251206578076
+        }
+      },
+      "colorfulness": 22.61148186667795,
+      "subband_entropy": {
+        "subband_entropy": 2.5926788689616456,
+        "luminance_entropy": 2.719630391424922,
+        "chrom_a_entropy": 1.797557688974252,
+        "chrom_b_entropy": 2.054809063084647,
+        "luminance_entropy_total": 38.074825479948906,
+        "chrom_a_entropy_total": 25.16580764563953,
+        "chrom_b_entropy_total": 28.767326883185056,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.012279033660888672,
+        "color_harmony": 3.765444040298462,
+        "colorfulness": 0.03416919708251953,
+        "subband_entropy": 1.0531740188598633
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 1,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0002.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 1.3606828223085972,
+        "template_distances": {
+          "i": 18.601409560574798,
+          "V": 10.153294139521702,
+          "L": 6.6844399387301525,
+          "mirror_L": 7.746657163347884,
+          "I": 7.927591794090825,
+          "T": 3.738549533835651,
+          "Y": 3.402621676420849,
+          "X": 1.3606828223085972
+        }
+      },
+      "colorfulness": 9.26416381161654,
+      "subband_entropy": {
+        "subband_entropy": 2.960699309481461,
+        "luminance_entropy": 3.40606220149898,
+        "chrom_a_entropy": 0.5890352214839761,
+        "chrom_b_entropy": 0.6560530312949931,
+        "luminance_entropy_total": 47.68487082098572,
+        "chrom_a_entropy_total": 8.246493100775666,
+        "chrom_b_entropy_total": 9.184742438129904,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.06937003135681152,
+        "color_harmony": 3.847010850906372,
+        "colorfulness": 0.04003310203552246,
+        "subband_entropy": 1.0269739627838135
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 2,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0003.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.9945247708140535,
+        "max": 1.0,
+        "mean": 0.9990325530316957
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.004578142892705998,
+        "template_distances": {
+          "i": 0.14502763256161313,
+          "V": 0.026346427682350012,
+          "L": 0.02407169529499626,
+          "mirror_L": 0.015345182972367435,
+          "I": 0.11968334578043315,
+          "T": 0.006392830470500374,
+          "Y": 0.00741767488175255,
+          "X": 0.004578142892705998
+        }
+      },
+      "colorfulness": 11.874960090868257,
+      "subband_entropy": {
+        "subband_entropy": 3.004699345775541,
+        "luminance_entropy": 3.2839792505503147,
+        "chrom_a_entropy": 1.564649499604564,
+        "chrom_b_entropy": 1.5123101918113921,
+        "luminance_entropy_total": 45.97570950770441,
+        "chrom_a_entropy_total": 21.905092994463896,
+        "chrom_b_entropy_total": 21.17234268535949,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.03986406326293945,
+        "color_harmony": 3.9811439514160156,
+        "colorfulness": 0.022472143173217773,
+        "subband_entropy": 1.1526930332183838
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 3,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0004.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      },
+      "color_harmony": {
+        "best_template": "T",
+        "best_distance": 0.09673311833659118,
+        "template_distances": {
+          "i": 29.077072015686944,
+          "V": 12.684743761291948,
+          "L": 3.5336945730793605,
+          "mirror_L": 3.4583666824933808,
+          "I": 4.441275674742403,
+          "T": 0.09673311833659118,
+          "Y": 0.7314198417739076,
+          "X": 0.21476941291090365
+        }
+      },
+      "colorfulness": 13.658981964222104,
+      "subband_entropy": {
+        "subband_entropy": 2.6011406457391226,
+        "luminance_entropy": 2.601339861055539,
+        "chrom_a_entropy": 2.926025033475185,
+        "chrom_b_entropy": 2.2741644971806894,
+        "luminance_entropy_total": 36.41875805477755,
+        "chrom_a_entropy_total": 40.96435046865259,
+        "chrom_b_entropy_total": 31.83830296052965,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.01455068588256836,
+        "color_harmony": 2.8826229572296143,
+        "colorfulness": 0.06085991859436035,
+        "subband_entropy": 1.490490198135376
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 4,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0005.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.9999675405245058,
+        "max": 1.0,
+        "mean": 0.9999945900874176
+      },
+      "color_harmony": {
+        "best_template": "i",
+        "best_distance": 0.0,
+        "template_distances": {
+          "i": 0.0,
+          "V": 0.0,
+          "L": 0.0,
+          "mirror_L": 0.0,
+          "I": 0.0,
+          "T": 0.0,
+          "Y": 0.0,
+          "X": 0.0
+        }
+      },
+      "colorfulness": 0.0,
+      "subband_entropy": {
+        "subband_entropy": 2.5830829310576733,
+        "luminance_entropy": 3.0750987274496113,
+        "chrom_a_entropy": 0.0,
+        "chrom_b_entropy": 0.0,
+        "luminance_entropy_total": 43.05138218429456,
+        "chrom_a_entropy_total": 0.0,
+        "chrom_b_entropy_total": 0.0,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.062258005142211914,
+        "color_harmony": 0.029700279235839844,
+        "colorfulness": 0.06282806396484375,
+        "subband_entropy": 1.635133981704712
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 5,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0006.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 1.3606828223085972,
+        "template_distances": {
+          "i": 18.601409560574798,
+          "V": 10.153294139521702,
+          "L": 6.6844399387301525,
+          "mirror_L": 7.746657163347884,
+          "I": 7.927591794090825,
+          "T": 3.738549533835651,
+          "Y": 3.402621676420849,
+          "X": 1.3606828223085972
+        }
+      },
+      "colorfulness": 9.26416381161654,
+      "subband_entropy": {
+        "subband_entropy": 2.827601836094713,
+        "luminance_entropy": 3.2476811783108133,
+        "chrom_a_entropy": 0.5886489454432015,
+        "chrom_b_entropy": 0.6557216334771689,
+        "luminance_entropy_total": 45.467536496351386,
+        "chrom_a_entropy_total": 8.241085236204821,
+        "chrom_b_entropy_total": 9.180102868680365,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.04740500450134277,
+        "color_harmony": 2.7364721298217773,
+        "colorfulness": 0.05705070495605469,
+        "subband_entropy": 1.5958006381988525
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 6,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0007.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.01474650625766409,
+        "max": 1.0,
+        "mean": 0.6715821687525546
+      },
+      "color_harmony": {
+        "best_template": "V",
+        "best_distance": 0.0,
+        "template_distances": {
+          "i": 0.0828125,
+          "V": 0.0,
+          "L": 0.0,
+          "mirror_L": 0.0,
+          "I": 0.0828125,
+          "T": 0.0,
+          "Y": 0.0,
+          "X": 0.0
+        }
+      },
+      "colorfulness": 2.373535420203029,
+      "subband_entropy": {
+        "subband_entropy": 2.774545940881774,
+        "luminance_entropy": 3.2836918983924535,
+        "chrom_a_entropy": 0.1216647456489125,
+        "chrom_b_entropy": 0.0813945822525037,
+        "luminance_entropy_total": 45.971686577494346,
+        "chrom_a_entropy_total": 1.703306439084775,
+        "chrom_b_entropy_total": 1.1395241515350518,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.10263299942016602,
+        "color_harmony": 2.8842649459838867,
+        "colorfulness": 0.0648500919342041,
+        "subband_entropy": 1.4226841926574707
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 7,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0008.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.853839915033529,
+        "max": 1.0,
+        "mean": 0.9459876191167628
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 5.8723202141669695e-05,
+        "template_distances": {
+          "i": 0.27739372611671237,
+          "V": 0.11142986679332452,
+          "L": 0.08621818260325136,
+          "mirror_L": 0.05860877825514367,
+          "I": 0.09635786610246333,
+          "T": 0.011593514540469353,
+          "Y": 0.0012396640687406897,
+          "X": 5.8723202141669695e-05
+        }
+      },
+      "colorfulness": 25.502898804422372,
+      "subband_entropy": {
+        "subband_entropy": 2.759175265587387,
+        "luminance_entropy": 2.9483206050247683,
+        "chrom_a_entropy": 1.8112314994275778,
+        "chrom_b_entropy": 1.7210929676546904,
+        "luminance_entropy_total": 41.276488470346756,
+        "chrom_a_entropy_total": 25.35724099198609,
+        "chrom_b_entropy_total": 24.095301547165665,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.03999900817871094,
+        "color_harmony": 2.668673038482666,
+        "colorfulness": 0.06402301788330078,
+        "subband_entropy": 1.5827181339263916
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 8,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0009.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0
+      },
+      "color_harmony": {
+        "best_template": "V",
+        "best_distance": 0.0,
+        "template_distances": {
+          "i": 0.0679812585756701,
+          "V": 0.0,
+          "L": 0.0,
+          "mirror_L": 0.0,
+          "I": 0.0679812585756701,
+          "T": 0.0,
+          "Y": 0.0,
+          "X": 0.0
+        }
+      },
+      "colorfulness": 17.501021982078225,
+      "subband_entropy": {
+        "subband_entropy": 2.7336680055055353,
+        "luminance_entropy": 2.8478327933404683,
+        "chrom_a_entropy": 2.0432311454776886,
+        "chrom_b_entropy": 2.2253745932665905,
+        "luminance_entropy_total": 39.869659106766555,
+        "chrom_a_entropy_total": 28.605236036687643,
+        "chrom_b_entropy_total": 31.155244305732268,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.05031704902648926,
+        "color_harmony": 2.7032108306884766,
+        "colorfulness": 0.05438113212585449,
+        "subband_entropy": 1.486109972000122
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 9,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0010.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.9968490484429847,
+        "max": 1.0,
+        "mean": 0.9991956060254918
+      },
+      "color_harmony": {
+        "best_template": "V",
+        "best_distance": 0.0,
+        "template_distances": {
+          "i": 0.08577946768060837,
+          "V": 0.0,
+          "L": 0.0,
+          "mirror_L": 0.0,
+          "I": 0.08577946768060837,
+          "T": 0.0,
+          "Y": 0.0,
+          "X": 0.0
+        }
+      },
+      "colorfulness": 3.2322080529676933,
+      "subband_entropy": {
+        "subband_entropy": 2.1755124183468575,
+        "luminance_entropy": 2.555923113670445,
+        "chrom_a_entropy": 0.17881676169147706,
+        "chrom_b_entropy": 0.17789577410456822,
+        "luminance_entropy_total": 35.78292359138623,
+        "chrom_a_entropy_total": 2.503434663680679,
+        "chrom_b_entropy_total": 2.4905408374639553,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.04059314727783203,
+        "color_harmony": 2.7833428382873535,
+        "colorfulness": 0.05271601676940918,
+        "subband_entropy": 1.5979118347167969
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 10,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0011.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.20997921327996003,
+        "max": 1.0,
+        "mean": 0.933536302953791
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.0,
+        "template_distances": {
+          "i": 0.135920015774508,
+          "V": 0.0803889141239518,
+          "L": 0.04027915166980747,
+          "mirror_L": 0.04034253531276311,
+          "I": 0.008545257513900185,
+          "T": 0.01037975809857859,
+          "Y": 8.56832608412668e-05,
+          "X": 0.0
+        }
+      },
+      "colorfulness": 62.20704746047526,
+      "subband_entropy": {
+        "subband_entropy": 2.0598116917914173,
+        "luminance_entropy": 2.274829674201967,
+        "chrom_a_entropy": 0.9065029335059087,
+        "chrom_b_entropy": 0.9554316347661498,
+        "luminance_entropy_total": 31.847615438827543,
+        "chrom_a_entropy_total": 12.691041069082722,
+        "chrom_b_entropy_total": 13.376042886726097,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.051590919494628906,
+        "color_harmony": 2.849152088165283,
+        "colorfulness": 0.06730389595031738,
+        "subband_entropy": 1.5630347728729248
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 11,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0012.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 1.3606828223085972,
+        "template_distances": {
+          "i": 18.601409560574798,
+          "V": 10.153294139521702,
+          "L": 6.6844399387301525,
+          "mirror_L": 7.746657163347884,
+          "I": 7.927591794090825,
+          "T": 3.738549533835651,
+          "Y": 3.402621676420849,
+          "X": 1.3606828223085972
+        }
+      },
+      "colorfulness": 9.26416381161654,
+      "subband_entropy": {
+        "subband_entropy": 2.823351516442778,
+        "luminance_entropy": 3.242628859838515,
+        "chrom_a_entropy": 0.588705786632662,
+        "chrom_b_entropy": 0.6555851405976564,
+        "luminance_entropy_total": 45.39680403773921,
+        "chrom_a_entropy_total": 8.241881012857268,
+        "chrom_b_entropy_total": 9.178191968367189,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.044328927993774414,
+        "color_harmony": 2.9284260272979736,
+        "colorfulness": 0.06015825271606445,
+        "subband_entropy": 1.5672533512115479
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 12,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0013.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0
+      },
+      "color_harmony": {
+        "best_template": "T",
+        "best_distance": 0.0007168986962400655,
+        "template_distances": {
+          "i": 0.1430929797695171,
+          "V": 0.008946895729076015,
+          "L": 0.01129354412810183,
+          "mirror_L": 0.002382493333837818,
+          "I": 0.138369413915402,
+          "T": 0.0007168986962400655,
+          "Y": 0.006947544920673168,
+          "X": 0.005091573851518331
+        }
+      },
+      "colorfulness": 11.874139269705992,
+      "subband_entropy": {
+        "subband_entropy": 2.974726591469155,
+        "luminance_entropy": 3.2479581723352693,
+        "chrom_a_entropy": 1.5654911378139573,
+        "chrom_b_entropy": 1.5150304460301542,
+        "luminance_entropy_total": 45.47141441269377,
+        "chrom_a_entropy_total": 21.916875929395403,
+        "chrom_b_entropy_total": 21.21042624442216,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.024293899536132812,
+        "color_harmony": 2.8338348865509033,
+        "colorfulness": 0.05832386016845703,
+        "subband_entropy": 1.5527980327606201
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 13,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0014.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.9828593240722653,
+        "max": 1.0,
+        "mean": 0.9934281752986701
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.6486927810295654,
+        "template_distances": {
+          "i": 23.730191605382956,
+          "V": 10.408686777727745,
+          "L": 4.096881284706589,
+          "mirror_L": 4.854153784581519,
+          "I": 7.354024713592477,
+          "T": 0.8374205813197256,
+          "Y": 2.028135474510979,
+          "X": 0.6486927810295654
+        }
+      },
+      "colorfulness": 3.987613103453978,
+      "subband_entropy": {
+        "subband_entropy": 2.7631903460201253,
+        "luminance_entropy": 3.030556653811413,
+        "chrom_a_entropy": 1.7097923344755583,
+        "chrom_b_entropy": 1.0092421257561748,
+        "luminance_entropy_total": 42.42779315335978,
+        "chrom_a_entropy_total": 23.937092682657816,
+        "chrom_b_entropy_total": 14.129389760586447,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.05863308906555176,
+        "color_harmony": 2.826931953430176,
+        "colorfulness": 0.06004691123962402,
+        "subband_entropy": 1.5435478687286377
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 14,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0015.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 1.3606828223085972,
+        "template_distances": {
+          "i": 18.601409560574798,
+          "V": 10.153294139521702,
+          "L": 6.6844399387301525,
+          "mirror_L": 7.746657163347884,
+          "I": 7.927591794090825,
+          "T": 3.738549533835651,
+          "Y": 3.402621676420849,
+          "X": 1.3606828223085972
+        }
+      },
+      "colorfulness": 9.26416381161654,
+      "subband_entropy": {
+        "subband_entropy": 2.8279947732166035,
+        "luminance_entropy": 3.248159755067783,
+        "chrom_a_entropy": 0.5886139823957156,
+        "chrom_b_entropy": 0.6556432546001069,
+        "luminance_entropy_total": 45.47423657094897,
+        "chrom_a_entropy_total": 8.240595753540019,
+        "chrom_b_entropy_total": 9.179005564401496,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.038240909576416016,
+        "color_harmony": 2.8444368839263916,
+        "colorfulness": 0.05697178840637207,
+        "subband_entropy": 1.5151832103729248
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 15,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0016.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.20997921327996003,
+        "max": 1.0,
+        "mean": 0.6941018577402622
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.014668069130888505,
+        "template_distances": {
+          "i": 4.337819773713294,
+          "V": 2.4075671133838648,
+          "L": 1.2245463582208798,
+          "mirror_L": 1.2247497086514767,
+          "I": 0.18780289665978858,
+          "T": 0.324685606815233,
+          "Y": 0.09466447695069322,
+          "X": 0.014668069130888505
+        }
+      },
+      "colorfulness": 44.08020036451668,
+      "subband_entropy": {
+        "subband_entropy": 3.3300097876127244,
+        "luminance_entropy": 3.6554313840643315,
+        "chrom_a_entropy": 1.6482756705876376,
+        "chrom_b_entropy": 1.5948171418959316,
+        "luminance_entropy_total": 51.17603937690064,
+        "chrom_a_entropy_total": 23.075859388226927,
+        "chrom_b_entropy_total": 22.32743998654304,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.07542705535888672,
+        "color_harmony": 2.6176748275756836,
+        "colorfulness": 0.029068946838378906,
+        "subband_entropy": 1.8065240383148193
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 16,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0017.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0
+      },
+      "color_harmony": {
+        "best_template": "i",
+        "best_distance": 0.0,
+        "template_distances": {
+          "i": 0.0,
+          "V": 0.0,
+          "L": 0.0,
+          "mirror_L": 0.0,
+          "I": 0.0,
+          "T": 0.0,
+          "Y": 0.0,
+          "X": 0.0
+        }
+      },
+      "colorfulness": 0.0,
+      "subband_entropy": {
+        "subband_entropy": 2.4207211049027526,
+        "luminance_entropy": 2.8818108391699435,
+        "chrom_a_entropy": 0.0,
+        "chrom_b_entropy": 0.0,
+        "luminance_entropy_total": 40.34535174837921,
+        "chrom_a_entropy_total": 0.0,
+        "chrom_b_entropy_total": 0.0,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.04232311248779297,
+        "color_harmony": 0.01612401008605957,
+        "colorfulness": 0.04349112510681152,
+        "subband_entropy": 0.9618940353393555
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 17,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0018.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.0008095510795789723,
+        "template_distances": {
+          "i": 0.05131924870007705,
+          "V": 0.017898890316480703,
+          "L": 0.01069880591215762,
+          "mirror_L": 0.015086917684988257,
+          "I": 0.02708901967726506,
+          "T": 0.0036789937219212335,
+          "Y": 0.0028471241915268,
+          "X": 0.0008095510795789723
+        }
+      },
+      "colorfulness": 63.7046532460411,
+      "subband_entropy": {
+        "subband_entropy": 3.211869382065195,
+        "luminance_entropy": 3.3013777182655195,
+        "chrom_a_entropy": 2.882922121207087,
+        "chrom_b_entropy": 2.600979112819896,
+        "luminance_entropy_total": 46.21928805571727,
+        "chrom_a_entropy_total": 40.36090969689921,
+        "chrom_b_entropy_total": 36.41370757947854,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.0253140926361084,
+        "color_harmony": 3.1884841918945312,
+        "colorfulness": 0.052915096282958984,
+        "subband_entropy": 1.1647229194641113
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 18,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0019.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0
+      },
+      "color_harmony": {
+        "best_template": "T",
+        "best_distance": 0.0018778906101892556,
+        "template_distances": {
+          "i": 0.5158529736844929,
+          "V": 0.00990632008556027,
+          "L": 0.011569594626013605,
+          "mirror_L": 0.004106320800947174,
+          "I": 0.5111958049712235,
+          "T": 0.0018778906101892556,
+          "Y": 0.005712900929645273,
+          "X": 0.005476286712761424
+        }
+      },
+      "colorfulness": 24.205588084427575,
+      "subband_entropy": {
+        "subband_entropy": 2.9767802223381885,
+        "luminance_entropy": 3.2416754684071774,
+        "chrom_a_entropy": 1.7381879256985608,
+        "chrom_b_entropy": 1.433972435253437,
+        "luminance_entropy_total": 45.383456557700484,
+        "chrom_a_entropy_total": 24.33463095977985,
+        "chrom_b_entropy_total": 20.07561409354812,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.08536696434020996,
+        "color_harmony": 2.839303970336914,
+        "colorfulness": 0.04114794731140137,
+        "subband_entropy": 1.893738031387329
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 19,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0020.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.20997921327996003,
+        "max": 1.0,
+        "mean": 0.6943085356064961
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.014463159263835583,
+        "template_distances": {
+          "i": 4.33905719839257,
+          "V": 2.4066654898936872,
+          "L": 1.2232714082359653,
+          "mirror_L": 1.2237441819414894,
+          "I": 0.1878521931848329,
+          "T": 0.32549747045422406,
+          "Y": 0.09470379901543328,
+          "X": 0.014463159263835583
+        }
+      },
+      "colorfulness": 44.08018953009718,
+      "subband_entropy": {
+        "subband_entropy": 3.251138826837117,
+        "luminance_entropy": 3.5616562244469314,
+        "chrom_a_entropy": 1.6474179876999948,
+        "chrom_b_entropy": 1.5944269910711892,
+        "luminance_entropy_total": 49.86318714225704,
+        "chrom_a_entropy_total": 23.063851827799926,
+        "chrom_b_entropy_total": 22.321977874996648,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.028146028518676758,
+        "color_harmony": 3.1924917697906494,
+        "colorfulness": 0.0683279037475586,
+        "subband_entropy": 1.2796862125396729
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 20,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0021.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 1.3606828223085972,
+        "template_distances": {
+          "i": 18.601409560574798,
+          "V": 10.153294139521702,
+          "L": 6.6844399387301525,
+          "mirror_L": 7.746657163347884,
+          "I": 7.927591794090825,
+          "T": 3.738549533835651,
+          "Y": 3.402621676420849,
+          "X": 1.3606828223085972
+        }
+      },
+      "colorfulness": 9.26416381161654,
+      "subband_entropy": {
+        "subband_entropy": 2.8083339423568456,
+        "luminance_entropy": 3.224742266197602,
+        "chrom_a_entropy": 0.5886224637210062,
+        "chrom_b_entropy": 0.6557580206647405,
+        "luminance_entropy_total": 45.14639172676643,
+        "chrom_a_entropy_total": 8.240714492094087,
+        "chrom_b_entropy_total": 9.180612289306367,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.03564310073852539,
+        "color_harmony": 2.7273359298706055,
+        "colorfulness": 0.022745847702026367,
+        "subband_entropy": 1.898151159286499
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 21,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0022.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.03197875252558166,
+        "template_distances": {
+          "i": 5.068475852180145,
+          "V": 2.1207285081144494,
+          "L": 1.4547065437007098,
+          "mirror_L": 1.312772518412305,
+          "I": 2.246382715244737,
+          "T": 0.5611190771035651,
+          "Y": 0.11051456690347386,
+          "X": 0.03197875252558166
+        }
+      },
+      "colorfulness": 15.54413983302595,
+      "subband_entropy": {
+        "subband_entropy": 3.1318812459084557,
+        "luminance_entropy": 3.468720984561642,
+        "chrom_a_entropy": 1.3369112466887192,
+        "chrom_b_entropy": 1.3900339892697386,
+        "luminance_entropy_total": 48.562093783862984,
+        "chrom_a_entropy_total": 18.716757453642067,
+        "chrom_b_entropy_total": 19.46047584977634,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.023189067840576172,
+        "color_harmony": 2.8847339153289795,
+        "colorfulness": 0.054267168045043945,
+        "subband_entropy": 1.5390570163726807
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 22,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0023.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.9801139591542768,
+        "max": 1.0,
+        "mean": 0.9973228671031369
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.0007222706050219545,
+        "template_distances": {
+          "i": 1.1303642844488186,
+          "V": 0.5980359118853097,
+          "L": 0.36933619398077405,
+          "mirror_L": 0.31297170290812665,
+          "I": 0.10169543564642763,
+          "T": 0.05184681457005025,
+          "Y": 0.00451452320721673,
+          "X": 0.0007222706050219545
+        }
+      },
+      "colorfulness": 44.05578092918972,
+      "subband_entropy": {
+        "subband_entropy": 3.490291350842458,
+        "luminance_entropy": 3.463805493117764,
+        "chrom_a_entropy": 3.3523149420071165,
+        "chrom_b_entropy": 3.90636926578708,
+        "luminance_entropy_total": 48.4932769036487,
+        "chrom_a_entropy_total": 46.93240918809963,
+        "chrom_b_entropy_total": 54.68916972101912,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.07111811637878418,
+        "color_harmony": 2.675283908843994,
+        "colorfulness": 0.026435136795043945,
+        "subband_entropy": 1.8041300773620605
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 23,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0024.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.0,
+        "template_distances": {
+          "i": 0.10267254691912797,
+          "V": 0.04777028061047034,
+          "L": 0.025284158099027534,
+          "mirror_L": 0.03655059196705575,
+          "I": 0.02783288582200643,
+          "T": 0.003722923246010657,
+          "Y": 0.0017473810153174083,
+          "X": 0.0
+        }
+      },
+      "colorfulness": 34.38735198598387,
+      "subband_entropy": {
+        "subband_entropy": 1.7706948756903536,
+        "luminance_entropy": 1.7160771985593588,
+        "chrom_a_entropy": 1.9107754877404786,
+        "chrom_b_entropy": 2.2040998735156743,
+        "luminance_entropy_total": 24.025080779831022,
+        "chrom_a_entropy_total": 26.7508568283667,
+        "chrom_b_entropy_total": 30.857398229219438,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.01807689666748047,
+        "color_harmony": 2.9225170612335205,
+        "colorfulness": 0.06243586540222168,
+        "subband_entropy": 1.5003442764282227
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 24,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0025.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.9796753855003729,
+        "max": 1.0,
+        "mean": 0.9972759672628528
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.0008587288802004249,
+        "template_distances": {
+          "i": 1.127388225461195,
+          "V": 0.5946213961904706,
+          "L": 0.36573118446179276,
+          "mirror_L": 0.30964088499920445,
+          "I": 0.09862006024229016,
+          "T": 0.04856935984570131,
+          "Y": 0.004603205527901003,
+          "X": 0.0008587288802004249
+        }
+      },
+      "colorfulness": 44.05168237490624,
+      "subband_entropy": {
+        "subband_entropy": 3.589639490844874,
+        "luminance_entropy": 3.580106350824582,
+        "chrom_a_entropy": 3.355878632241571,
+        "chrom_b_entropy": 3.9234983196612467,
+        "luminance_entropy_total": 50.12148891154415,
+        "chrom_a_entropy_total": 46.98230085138199,
+        "chrom_b_entropy_total": 54.92897647525746,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.06107211112976074,
+        "color_harmony": 2.734636068344116,
+        "colorfulness": 0.04328179359436035,
+        "subband_entropy": 1.6594769954681396
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 25,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0026.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 1.3606828223085972,
+        "template_distances": {
+          "i": 18.601409560574798,
+          "V": 10.153294139521702,
+          "L": 6.6844399387301525,
+          "mirror_L": 7.746657163347884,
+          "I": 7.927591794090825,
+          "T": 3.738549533835651,
+          "Y": 3.402621676420849,
+          "X": 1.3606828223085972
+        }
+      },
+      "colorfulness": 9.26416381161654,
+      "subband_entropy": {
+        "subband_entropy": 3.0419361500636617,
+        "luminance_entropy": 3.5027263975650498,
+        "chrom_a_entropy": 0.5892199733711854,
+        "chrom_b_entropy": 0.6563547279915626,
+        "luminance_entropy_total": 49.0381695659107,
+        "chrom_a_entropy_total": 8.249079627196595,
+        "chrom_b_entropy_total": 9.188966191881876,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.06128406524658203,
+        "color_harmony": 2.662856101989746,
+        "colorfulness": 0.0640110969543457,
+        "subband_entropy": 1.4695689678192139
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 26,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0027.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.20997921327996003,
+        "max": 1.0,
+        "mean": 0.9154109849831493
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.0,
+        "template_distances": {
+          "i": 0.13542492303784828,
+          "V": 0.07972884799810824,
+          "L": 0.039511580450080803,
+          "mirror_L": 0.03976042109135177,
+          "I": 0.008483352966162929,
+          "T": 0.010307235537027224,
+          "Y": 5.2548837575922124e-05,
+          "X": 0.0
+        }
+      },
+      "colorfulness": 62.31296270466778,
+      "subband_entropy": {
+        "subband_entropy": 2.5735917423952466,
+        "luminance_entropy": 2.8769942611707067,
+        "chrom_a_entropy": 0.9762584647484406,
+        "chrom_b_entropy": 0.9851985728997225,
+        "luminance_entropy_total": 40.27791965638989,
+        "chrom_a_entropy_total": 13.667618506478169,
+        "chrom_b_entropy_total": 13.792780020596114,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.06569790840148926,
+        "color_harmony": 2.5328190326690674,
+        "colorfulness": 0.02955794334411621,
+        "subband_entropy": 1.0131258964538574
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 27,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0028.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.9944312229370486,
+        "max": 1.0,
+        "mean": 0.9982588686515488
+      },
+      "color_harmony": {
+        "best_template": "i",
+        "best_distance": 0.0,
+        "template_distances": {
+          "i": 0.0,
+          "V": 0.0,
+          "L": 0.0,
+          "mirror_L": 0.0,
+          "I": 0.0,
+          "T": 0.0,
+          "Y": 0.0,
+          "X": 0.0
+        }
+      },
+      "colorfulness": 0.0,
+      "subband_entropy": {
+        "subband_entropy": 2.9714217256419735,
+        "luminance_entropy": 3.537406816240445,
+        "chrom_a_entropy": 0.0,
+        "chrom_b_entropy": 0.0,
+        "luminance_entropy_total": 49.52369542736623,
+        "chrom_a_entropy_total": 0.0,
+        "chrom_b_entropy_total": 0.0,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.12450313568115234,
+        "color_harmony": 0.012217044830322266,
+        "colorfulness": 0.04713606834411621,
+        "subband_entropy": 0.9673008918762207
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 28,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0029.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.003494055186003419,
+        "template_distances": {
+          "i": 7.221484464469876,
+          "V": 3.927513866789147,
+          "L": 2.133484493554686,
+          "mirror_L": 2.0262706123443213,
+          "I": 0.17232265234078192,
+          "T": 0.27114798957309566,
+          "Y": 0.016286524159176318,
+          "X": 0.003494055186003419
+        }
+      },
+      "colorfulness": 24.448600111099616,
+      "subband_entropy": {
+        "subband_entropy": 2.926554192548997,
+        "luminance_entropy": 3.144609820834702,
+        "chrom_a_entropy": 1.7051041611826847,
+        "chrom_b_entropy": 1.8584201269154104,
+        "luminance_entropy_total": 44.02453749168583,
+        "chrom_a_entropy_total": 23.871458256557585,
+        "chrom_b_entropy_total": 26.017881776815745,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.01173710823059082,
+        "color_harmony": 3.5286710262298584,
+        "colorfulness": 0.028782129287719727,
+        "subband_entropy": 1.070807933807373
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 29,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0030.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.9226230152747382,
+        "max": 1.0,
+        "mean": 0.9729926083762023
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 1.3192258403131623,
+        "template_distances": {
+          "i": 18.511618955977866,
+          "V": 10.05894198176132,
+          "L": 6.561312135062433,
+          "mirror_L": 7.7535477945196485,
+          "I": 7.9473221510267456,
+          "T": 3.683574255910075,
+          "Y": 3.39383383996326,
+          "X": 1.3192258403131623
+        }
+      },
+      "colorfulness": 9.45042071673502,
+      "subband_entropy": {
+        "subband_entropy": 2.7301309330321666,
+        "luminance_entropy": 3.1409797697336077,
+        "chrom_a_entropy": 0.5903931430134258,
+        "chrom_b_entropy": 0.5559559376857834,
+        "luminance_entropy_total": 43.97371677627051,
+        "chrom_a_entropy_total": 8.265504002187962,
+        "chrom_b_entropy_total": 7.783383127600969,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.04410696029663086,
+        "color_harmony": 3.4494221210479736,
+        "colorfulness": 0.028792142868041992,
+        "subband_entropy": 1.077639102935791
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 30,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0031.png"
+    }
+  ],
+  "aggregated": {
+    "figure_ground_contrast": {
+      "mean": 0.8557953224486783,
+      "std": 0.29759668416656293,
+      "min": 0.0,
+      "max": 1.0,
+      "slide_min_mean": 0.7345008903788104,
+      "slide_max_mean": 0.9032258064516129
+    },
+    "lab": {},
+    "hsv": {},
+    "color_harmony": {
+      "mean_distance": 0.3502937949759675,
+      "std_distance": 0.5617943311429999,
+      "min_distance": 0.0,
+      "max_distance": 1.3606828223085972,
+      "deck_metrics": {
+        "mean_score": 0.7303470304493821,
+        "deck_consistency": 0.42567303466122364,
+        "final_score": 30.46739957881585
+      }
+    },
+    "colorfulness": {
+      "mean": 21.535434072318868,
+      "std": 18.925915222753815,
+      "min": 0.0,
+      "max": 63.7046532460411,
+      "pacing_score": 0.09185789927661697,
+      "pacing_normalization": {
+        "method": "gaussian",
+        "formula": "S_norm = exp(-((σ - μ_target)^2) / (2*w^2))",
+        "mu_target": 8.0,
+        "w": 5.0,
+        "sigma_pacing": 18.925915222753815
+      }
+    },
+    "subband_entropy": {
+      "mean": 2.827607286580864,
+      "std": 0.37844106535997846,
+      "min": 1.7706948756903536,
+      "max": 3.589639490844874,
+      "mean_luminance": 3.1167544564334095
+    },
+    "visual_hrv": {
+      "rmssd": 0.016940827512956013,
+      "overload_count": 0,
+      "overload_window": 3,
+      "overload_threshold": 0.75,
+      "overload_window_start_indices": [],
+      "deltas": [
+        0.009349803895602169,
+        0.009085577625997703,
+        0.0014456352573216334,
+        0.010372258095909593,
+        0.00033685099720360753,
+        0.005407946557526163,
+        0.0013418633591015527,
+        0.0003698544762435474,
+        0.0005958405222266528,
+        0.00874578718693753,
+        0.0010743237362305091,
+        0.012016333270870804,
+        0.004417874800752723,
+        0.00592243898942359,
+        0.0016262276937280204,
+        0.019302845137150866,
+        0.027381037993427573,
+        0.021537152115464996,
+        0.009095954093560229,
+        0.010932351225141659,
+        0.015804962118560695,
+        0.010527805032124655,
+        0.01890877216679972,
+        0.043065800037312765,
+        0.050177046727000046,
+        0.029450809371971916,
+        0.012179197932649223,
+        0.009780922458488992,
+        0.001404559481788345,
+        0.0051833548337615575
+      ],
+      "final_score": 6.776331005182401,
+      "interpretation": "flatline",
+      "n_slides_used": 31,
+      "normalization": {
+        "method": "sigmoid",
+        "formula": "S(x) = 1 / (1 + exp(-k * (x - mu)))",
+        "mu": 5.5,
+        "k": 1.5,
+        "raw_scores": [
+          2.9689514245539863,
+          2.5926788689616456,
+          2.960699309481461,
+          3.004699345775541,
+          2.6011406457391226,
+          2.5830829310576733,
+          2.827601836094713,
+          2.774545940881774,
+          2.759175265587387,
+          2.7336680055055353,
+          2.1755124183468575,
+          2.0598116917914173,
+          2.823351516442778,
+          2.974726591469155,
+          2.7631903460201253,
+          2.8279947732166035,
+          3.3300097876127244,
+          2.4207211049027526,
+          3.211869382065195,
+          2.9767802223381885,
+          3.251138826837117,
+          2.8083339423568456,
+          3.1318812459084557,
+          3.490291350842458,
+          1.7706948756903536,
+          3.589639490844874,
+          3.0419361500636617,
+          2.5735917423952466,
+          2.9714217256419735,
+          2.926554192548997,
+          2.7301309330321666
+        ],
+        "normalized_scores": [
+          0.021954740480451623,
+          0.012604936584849454,
+          0.021690514210847157,
+          0.02313614946816879,
+          0.012763891372259197,
+          0.01242704037505559,
+          0.017834986932581752,
+          0.0164931235734802,
+          0.016123269097236652,
+          0.015527428575009999,
+          0.00678164138807247,
+          0.0057073176518419606,
+          0.017723650922712764,
+          0.022141525723465488,
+          0.016219086734041897,
+          0.017845314427769918,
+          0.037148159564920784,
+          0.009767121571493209,
+          0.031304273686958206,
+          0.022208319593397977,
+          0.033140670818539636,
+          0.01733570869997894,
+          0.027863513732103596,
+          0.04677228589890332,
+          0.003706485861590554,
+          0.0538835325885906,
+          0.02443272321661868,
+          0.012253525283969459,
+          0.02203444774245845,
+          0.020629888260670106,
+          0.015446533426908549
+        ]
+      }
+    }
+  }
+}

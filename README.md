@@ -1,153 +1,281 @@
-# SlideGen-Bench
+<p align="center">
+  <img src="images/logo.png" alt="SlideGen-Bench Logo" width="400">
+</p>
 
-A comprehensive benchmark for evaluating AI-generated PowerPoint presentations.
+<p align="center">
+  <b>🎯 A Comprehensive Benchmark for Evaluating AI-Generated Presentations</b>
+</p>
 
-## Overview
+<p align="center">
+  <a href="https://huggingface.co/datasets/Yqy6/SlideGen-Align">
+    <img src="https://img.shields.io/badge/🤗%20Dataset-SlideGen--Align-yellow" alt="Dataset">
+  </a>
+  <a href="#license">
+    <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
+  </a>
+  <a href="https://www.python.org/downloads/">
+    <img src="https://img.shields.io/badge/Python-3.8+-blue.svg" alt="Python">
+  </a>
+  <a href="#installation">
+    <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg" alt="PRs Welcome">
+  </a>
+</p>
 
-SlideGen-Bench provides quantitative evaluation tools for assessing PowerPoint presentations using Vision-Language Models (VLMs) and image-based aesthetics metrics.
+<p align="center">
+  <a href="#-abstract">Abstract</a> •
+  <a href="#-installation">Installation</a> •
+  <a href="#-evaluation-pipeline">Evaluation</a> •
+  <a href="#-slidegen-align-dataset">Dataset</a> •
+  <a href="#-license">License</a>
+</p>
 
-## Installation
+---
+
+## 📖 Abstract
+
+The rapid evolution of Large Language Models (LLMs) has fostered diverse paradigms for automated slide generation, ranging from code-driven layouts to image-centric synthesis. However, evaluating these heterogeneous systems remains challenging, as existing protocols often struggle to provide comparable scores across architectures or rely on uncalibrated judgments.
+
+In this paper, we introduce **SlideGen-Bench**, a benchmark designed to evaluate slide generation through a lens of three core principles:
+
+| Principle | Description |
+|:---------:|:------------|
+| 🌐 **Universality** | Unified visual-domain evaluation framework agnostic to generation methods |
+| 📊 **Quantification** | Reproducible metrics across *Content*, *Aesthetics*, and *Editability* |
+| ✅ **Reliability** | High correlation with human preference via the SlideGen-Align dataset |
+
+<p align="center">
+  <img src="images/main-pipeline.pdf" alt="Main Pipeline" width="800">
+</p>
+
+---
+
+## 🚀 Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/yunqiaoyang/SlideGen-Bench.git
+cd SlideGen-Bench
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-## Evaluation Module
+### 📦 Additional Setup
 
-### Quantitative Evaluation
+Configure **PaddleOCR DocLayout Detection** for layout analysis:
+- 📖 [PaddleOCR Documentation](https://www.paddleocr.ai/latest/version3.x/module_usage/layout_detection.html#_4)
+- We use the `PP-DocLayout_plus-L` model
 
-The `quantitative_eval.py` script performs detailed evaluation of PowerPoint presentations.
+---
 
-#### Usage
+## 🔬 Evaluation Pipeline
+
+### 📋 Step 1: Slide Generation & Preprocessing
+
+Convert all slide formats into images to ensure a unified evaluation framework.
+
+<details>
+<summary><b>🖼️ Image Conversion</b></summary>
+
+We provide a converting script for preprocessing:
 
 ```bash
-python eval/quantitative_eval.py [OPTIONS]
+python eval/pre_process.py --input /path/to/slides --output /path/to/images
 ```
 
-#### Key Options
+For pipelines that do not directly output images:
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| `--provider` | VLM provider (`openai`, `anthropic`, `google`, `ollama`, `mock`, `custom-google`) | `openai` |
-| `--model` | Specific model name | Provider default |
-| `--ppt-root` | Root directory for generated PPTs | Config default |
-| `--output-dir` | Directory to save results | Config default |
-| `--products` | Products to evaluate (`Gamma`, `NotebookLM`, `Kimi-Standard`, etc.) | All |
-| `--difficulties` | Difficulties to evaluate | All |
-| `--topics` | Specific topics to evaluate | All |
-| `--limit` | Maximum number of PPTs to evaluate | None |
-| `--max-images` | Maximum images per PPT | Config default |
-| `--max-images-per-call` | Maximum images per VLM call (for batching) | Config default |
-| `--source-mode` | Source content mode: `topic`, `scene`, or `all` | `all` |
-| `--workers` | Number of parallel workers | 4 |
-| `--use-cache` | Use cached results if available | False |
-| `--cache-file` | Path to cache file for incremental evaluation | Auto-detected |
-| `--output-file` | Output filename | Auto-generated |
-
-#### Source Mode Options
-
-- `topic`: Evaluates topic_introduction difficulty only
-- `scene`: Evaluates scene-based difficulties (work_report, business_plan, brand_promote, personal_statement, product_launch, course_preparation)
-- `all`: Evaluates all difficulties
-
-#### Evaluation Mode Options
-
-| Mode | Description |
-|------|-------------|
-| `full` | VLM evaluation + aesthetics metrics |
-| `vlm_only` | Legacy content + visual evaluation |
-| `content_only` | Text-based VLM evaluation only |
-| `visual_only` | Image-only evaluation |
-| `aesthetics_only` | Image-based metrics only, no VLM calls |
-
-#### Aesthetics Options
-
-| Option | Description |
-|--------|-------------|
-| `--no-aesthetics` | Disable aesthetics metrics computation |
-| `--aesthetics-metrics` | Comma-separated list of metrics to compute |
-| `--aesthetics-config` | Path to JSON config for aesthetics score parameters |
-
-Available aesthetics metrics:
-- `figure_ground_contrast`
-- `lab`
-- `hsv`
-- `color_harmony`
-- `visual_complexity`
-- `colorfulness`
-- `subband_entropy`
-
-#### Visual Evaluation Options
-
-| Option | Description |
-|--------|-------------|
-| `--use-grids` | Use slide grids to reduce VLM token consumption |
-| `--visual-grade-mode` | Request bad/moderate/good grades for visual evaluation |
-
-#### Target Folder Mode
-
-| Option | Description |
-|--------|-------------|
-| `--target-folder` | Process subfolders of specified path as individual PPTs |
-
-### Examples
-
-**Basic evaluation:**
 ```bash
-python eval/quantitative_eval.py --provider openai --products Gamma NotebookLM
+python eval/process_zhipu.py  # Example script - adapt to your pipeline
 ```
 
-**Evaluate with caching:**
+</details>
+
+<details>
+<summary><b>📑 PPTX to Image Conversion</b></summary>
+
+For PPTX files, we use **LibreOffice** for conversion:
+- 📖 [Official LibreOffice Documentation](https://www.libreoffice.org/get-help/documentation/)
+
+</details>
+
+---
+
+### 📝 Step 2: Content Evaluation (QuizBank)
+
+Evaluate content quality using the **QuizBank** methodology:
+
 ```bash
-python eval/quantitative_eval.py --use-cache --cache-file results/cached_results.json
+# Run content evaluation
+python eval/quantitative_eval.py --eval-mode content_only --provider openai
+
+# Calculate quiz accuracy and generate results
+python eval/calculate_quiz_accuracy.py --input results/content_eval.json --output results/accuracy_table.csv
 ```
 
-**Aesthetics-only evaluation:**
-```bash
-python eval/quantitative_eval.py --eval-mode aesthetics_only --aesthetics-metrics lab,hsv,colorfulness
-```
+---
 
-**Evaluate specific topics:**
-```bash
-python eval/quantitative_eval.py --source-mode topic --topics "Machine Learning" "Data Science"
-```
+### 🎨 Step 3: Aesthetics Evaluation
 
-**Process a target folder:**
-```bash
-python eval/quantitative_eval.py --target-folder /path/to/ppts --eval-mode aesthetics_only
-```
+#### 📐 Core Aesthetics Metrics
 
-### Aesthetics Metrics Module
-
-The `aesthetics_metrics.py` module can also be run standalone:
+Computational aesthetics metrics for objective evaluation:
 
 ```bash
 python eval/aesthetics_metrics.py IMAGE_PATH [OPTIONS]
 ```
 
-#### Options
+| Metric | Description |
+|:-------|:------------|
+| `figure_ground_contrast` | 🔲 Measures foreground/background contrast using WCAG standards |
+| `color_harmony` | 🎨 Computes distance to harmonic color templates |
+| `colorfulness` | 🌈 Measures colorfulness using Hasler & Süsstrunk's method |
+| `subband_entropy` | 📊 Analyzes visual complexity via subband decomposition |
+| `visual_hrv` | 💓 Visual Heart Rate Variability for temporal consistency from subband entropy |
 
-| Option | Description |
-|--------|-------------|
-| `--output, -o` | Output JSON file path |
-| `--verbose, -v` | Verbose output |
-| `--workers, -w` | Number of parallel workers (default: 2) |
-| `--no-parallel` | Disable parallel processing |
-| `--metrics` | Comma-separated list of metrics to compute |
-| `--config, -c` | Path to JSON config file for score parameters |
-| `--compute-score` | Compute total aesthetics score from aggregated metrics |
+**Example Usage:**
 
-## Output Format
+```bash
+python eval/quantitative_eval.py --eval-mode aesthetics_only \
+    --aesthetics-metrics figure_ground_contrast,color_harmony,colorfulness,subband_entropy
+```
 
-Results are saved as JSON files containing:
-- Individual PPT evaluation scores
-- Aggregated metrics per product/difficulty
-- Summary statistics
+> 📖 For detailed configuration, see [Aesthetics Configuration Guide](docs/Aesthetics_config.md)
 
-## Configuration
+#### 🤖 LLM-as-Judge Methods
 
-Configuration options can be set in `eval/eval_config.py` or via command-line arguments.
+We also provide LLM-based evaluation methods:
 
-## License
+| Method | Description |
+|:-------|:------------|
+| **LLM Rating** | Direct scoring by language models |
+| **LLM Arena** | Pairwise comparison with ELO ranking |
 
-See LICENSE file for details.
+> 📖 See [LLM Evaluation Guide](docs/LLM_EVALUATION.md) for detailed documentation
+
+---
+
+### ✏️ Step 4: Presentation Editability Intelligence (PEI)
+
+Evaluate presentation editability using a **knock-out evaluation strategy** — assessing how well generated presentations can be edited and modified after creation.
+
+> 📄 **Reference:** [PEI Evaluation Protocol](eval/pei.md)
+
+---
+
+## 📋 Quick Reference
+
+| Dimension | Method | Script | Description |
+|:----------|:-------|:-------|:------------|
+| 📝 **Content** | QuizBank | `quantitative_eval.py --eval-mode content_only` | Quiz-based content accuracy |
+| 🎨 **Aesthetics** | Computational | `aesthetics_metrics.py` | Objective visual metrics |
+| 🎨 **Aesthetics** | LLM Rating | `quantitative_eval.py --eval-mode visual_only` | LLM-based scoring |
+| 🎨 **Aesthetics** | LLM Arena | `arena_eval.py` | Pairwise ELO ranking |
+| ✏️ **Editability** | PEI Knock-out | [PEI Protocol](docs/PEI(2).pdf) | Edit capability assessment |
+
+---
+
+## ⚙️ Configuration
+
+Configuration options can be set via:
+- 📝 Config file: `eval/eval_config.py`
+- 💻 Command-line arguments
+
+---
+
+## 📊 SlideGen-Align Dataset
+
+<p align="center">
+  <a href="https://huggingface.co/datasets/Yqy6/SlideGen-Align">
+    <img src="https://huggingface.co/datasets/huggingface/badges/resolve/main/dataset-on-hf-sm.svg" alt="Dataset on HF">
+  </a>
+</p>
+
+We release **SlideGen-Align**, a human preference dataset for evaluating AI-generated slide presentations.
+
+<p align="center">
+  🤗 <a href="https://huggingface.co/datasets/Yqy6/SlideGen-Align"><b>huggingface.co/datasets/Yqy6/SlideGen-Align</b></a>
+</p>
+
+### 📈 Dataset Statistics
+
+<table align="center">
+  <tr>
+    <td align="center"><b>📊 Total Rankings</b><br>1,326</td>
+    <td align="center"><b>🏢 Products</b><br>9</td>
+    <td align="center"><b>📂 Categories</b><br>7</td>
+    <td align="center"><b>💡 Topics</b><br>187</td>
+  </tr>
+</table>
+
+### 🏢 Products Evaluated
+
+| Product | Provider | Description |
+|:--------|:---------|:------------|
+| **Gamma** | Gamma.app | 🎨 AI presentation maker |
+| **NotebookLM** | Google | 📓 AI notebook with presentation generation |
+| **Kimi-Standard** | Moonshot AI | 🌙 Kimi (standard mode) |
+| **Kimi-Smart** | Moonshot AI | 🧠 Kimi (smart mode) |
+| **Kimi-Banana** | Moonshot AI | 🍌 Kimi (Banana template) |
+| **Skywork** | Kunlun Tech | 🌤️ Skywork AI |
+| **Skywork-Banana** | Kunlun Tech | 🍌 Skywork (Banana template) |
+| **Zhipu** | Zhipu AI | 🤖 Presentation generator |
+| **Quake** | ByteDance | ⚡ Quake presentation tool |
+
+### 📂 Scenario Categories
+
+| Category | Topics | Description |
+|:---------|:------:|:------------|
+| `topic_introduction` | 93 | 📚 General topic introductions (AI, Climate Change, 5G, etc.) |
+| `product_launch` | 23 | 🚀 Product launch announcements |
+| `personal_statement` | 20 | 👤 Personal statements and self-introductions |
+| `brand_promote` | 15 | 📢 Brand promotion and marketing |
+| `course_preparation` | 15 | 🎓 Educational course materials |
+| `work_report` | 13 | 📊 Work progress reports |
+| `business_plan` | 8 | 💼 Business plan presentations |
+
+### 📝 Annotation Format
+
+<details>
+<summary>Click to expand annotation example</summary>
+
+```json
+{
+    "results": [
+        {
+            "product": "NotebookLM",
+            "difficulty": "topic_introduction",
+            "topic": "FinTech",
+            "rank": 1
+        },
+        ...
+    ]
+}
+```
+
+</details>
+
+### 💻 Usage
+
+```python
+from datasets import load_dataset
+
+# Load from Hugging Face
+dataset = load_dataset("Yqy6/SlideGen-Align")
+
+# Access the data
+for item in dataset['train']:
+    print(f"{item['product']} - {item['topic']}: Rank {item['rank']}")
+```
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<p align="center">
+  <i>If you find SlideGen-Bench useful, please consider giving us a ⭐!</i>
+</p>

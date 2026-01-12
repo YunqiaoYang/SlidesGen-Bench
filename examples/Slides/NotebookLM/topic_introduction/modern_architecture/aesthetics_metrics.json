@@ -1,0 +1,958 @@
+{
+  "num_slides": 15,
+  "slides": [
+    {
+      "figure_ground_contrast": {
+        "min": 0.6449674485031257,
+        "max": 0.8989501055596517,
+        "mean": 0.8083559607152874
+      },
+      "color_harmony": {
+        "best_template": "T",
+        "best_distance": 0.1793604775965616,
+        "template_distances": {
+          "i": 21.80598951500956,
+          "V": 8.382866008691376,
+          "L": 8.911745616148222,
+          "mirror_L": 3.911602508908425,
+          "I": 10.017264397780883,
+          "T": 0.1793604775965616,
+          "Y": 0.9789110910495951,
+          "X": 0.22369730672174684
+        }
+      },
+      "colorfulness": 36.7064517953794,
+      "subband_entropy": {
+        "subband_entropy": 5.798505206246815,
+        "luminance_entropy": 5.633078652584222,
+        "chrom_a_entropy": 7.080413709848465,
+        "chrom_b_entropy": 6.253575516102392,
+        "luminance_entropy_total": 78.8631011361791,
+        "chrom_a_entropy_total": 99.12579193787852,
+        "chrom_b_entropy_total": 87.55005722543348,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.08522200584411621,
+        "color_harmony": 3.851928949356079,
+        "colorfulness": 0.06766009330749512,
+        "subband_entropy": 2.1671628952026367
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 0,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/NotebookLM/high/modern_architecture/slide_images/slide_0001.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.7685497821426257,
+        "max": 0.8964634841471208,
+        "mean": 0.8376449665442914
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 1.1567137532807084,
+        "template_distances": {
+          "i": 12.130793851012951,
+          "V": 6.323793431380095,
+          "L": 4.943193132919327,
+          "mirror_L": 4.189378819217695,
+          "I": 6.295505955558647,
+          "T": 2.3140492584416967,
+          "Y": 2.675668743311325,
+          "X": 1.1567137532807084
+        }
+      },
+      "colorfulness": 6.915167094190831,
+      "subband_entropy": {
+        "subband_entropy": 6.285421374266974,
+        "luminance_entropy": 6.213199919335132,
+        "chrom_a_entropy": 6.336073210690637,
+        "chrom_b_entropy": 6.993094814627656,
+        "luminance_entropy_total": 86.98479887069185,
+        "chrom_a_entropy_total": 88.70502494966892,
+        "chrom_b_entropy_total": 97.90332740478719,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.11476302146911621,
+        "color_harmony": 3.860074996948242,
+        "colorfulness": 0.05844521522521973,
+        "subband_entropy": 2.244856119155884
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 1,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/NotebookLM/high/modern_architecture/slide_images/slide_0002.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.8271475526751247,
+        "max": 0.9654673556912905,
+        "mean": 0.8760998048334484
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.016023250749432772,
+        "template_distances": {
+          "i": 1.1194048092585227,
+          "V": 0.06742050679211656,
+          "L": 0.05222779867868718,
+          "mirror_L": 0.046185670445126406,
+          "I": 1.0606607230554193,
+          "T": 0.027216243302881957,
+          "Y": 0.02464583884250689,
+          "X": 0.016023250749432772
+        }
+      },
+      "colorfulness": 17.475800568805298,
+      "subband_entropy": {
+        "subband_entropy": 6.407790654097884,
+        "luminance_entropy": 6.3078689814146784,
+        "chrom_a_entropy": 6.763489680844068,
+        "chrom_b_entropy": 7.10126919052535,
+        "luminance_entropy_total": 88.3101657398055,
+        "chrom_a_entropy_total": 94.68885553181696,
+        "chrom_b_entropy_total": 99.4177686673549,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.17986106872558594,
+        "color_harmony": 3.407602071762085,
+        "colorfulness": 0.08017587661743164,
+        "subband_entropy": 2.1764721870422363
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 2,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/NotebookLM/high/modern_architecture/slide_images/slide_0003.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.8726406156565122,
+        "max": 0.9599570225686999,
+        "mean": 0.9204714435394044
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.3652198827859906,
+        "template_distances": {
+          "i": 5.491885730234879,
+          "V": 1.646101624582955,
+          "L": 1.1159939509617882,
+          "mirror_L": 1.2042523577725754,
+          "I": 4.018989385778091,
+          "T": 0.6066686385526767,
+          "Y": 0.616555320973848,
+          "X": 0.3652198827859906
+        }
+      },
+      "colorfulness": 11.797190682989248,
+      "subband_entropy": {
+        "subband_entropy": 5.214343160526343,
+        "luminance_entropy": 5.018236182619039,
+        "chrom_a_entropy": 6.025580385703348,
+        "chrom_b_entropy": 6.4622292033760385,
+        "luminance_entropy_total": 70.25530655666654,
+        "chrom_a_entropy_total": 84.35812539984687,
+        "chrom_b_entropy_total": 90.47120884726453,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.20166707038879395,
+        "color_harmony": 3.4536871910095215,
+        "colorfulness": 0.046914100646972656,
+        "subband_entropy": 2.135125160217285
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 3,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/NotebookLM/high/modern_architecture/slide_images/slide_0004.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.8338818372494512,
+        "max": 0.8881046285297485,
+        "mean": 0.8608111577707901
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.8659294432250954,
+        "template_distances": {
+          "i": 10.029263667243011,
+          "V": 4.604674118612154,
+          "L": 3.765198215442391,
+          "mirror_L": 2.947131181203713,
+          "I": 5.754289582005537,
+          "T": 1.530352763080327,
+          "Y": 1.9104315106876948,
+          "X": 0.8659294432250954
+        }
+      },
+      "colorfulness": 9.4804778528867,
+      "subband_entropy": {
+        "subband_entropy": 5.557246320795599,
+        "luminance_entropy": 5.424873667815509,
+        "chrom_a_entropy": 5.955212110085914,
+        "chrom_b_entropy": 6.549193387796231,
+        "luminance_entropy_total": 75.94823134941713,
+        "chrom_a_entropy_total": 83.37296954120279,
+        "chrom_b_entropy_total": 91.68870742914724,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.17206192016601562,
+        "color_harmony": 3.6915817260742188,
+        "colorfulness": 0.06886100769042969,
+        "subband_entropy": 2.4026780128479004
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 4,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/NotebookLM/high/modern_architecture/slide_images/slide_0005.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.8537961870087071,
+        "max": 0.8871995045926919,
+        "mean": 0.8695545682380291
+      },
+      "color_harmony": {
+        "best_template": "T",
+        "best_distance": 0.6364852979437152,
+        "template_distances": {
+          "i": 23.667545996449682,
+          "V": 8.567501099402062,
+          "L": 5.8136190589118355,
+          "mirror_L": 3.3402864086276014,
+          "I": 11.772045601585903,
+          "T": 0.6364852979437152,
+          "Y": 4.560816101692964,
+          "X": 1.6046554209155766
+        }
+      },
+      "colorfulness": 30.834740136052666,
+      "subband_entropy": {
+        "subband_entropy": 6.051329505280116,
+        "luminance_entropy": 5.94705538053068,
+        "chrom_a_entropy": 6.97077726558956,
+        "chrom_b_entropy": 6.226760054839763,
+        "luminance_entropy_total": 83.25877532742952,
+        "chrom_a_entropy_total": 97.59088171825384,
+        "chrom_b_entropy_total": 87.17464076775667,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.10999011993408203,
+        "color_harmony": 3.688256025314331,
+        "colorfulness": 0.06217813491821289,
+        "subband_entropy": 2.302557945251465
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 5,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/NotebookLM/high/modern_architecture/slide_images/slide_0006.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.868109412209731,
+        "max": 0.8691325765770785,
+        "mean": 0.8686209943934048
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.253713327618799,
+        "template_distances": {
+          "i": 9.792272466715772,
+          "V": 2.6615496683634046,
+          "L": 2.282809455405032,
+          "mirror_L": 1.8129142219701189,
+          "I": 6.601642434020376,
+          "T": 0.8041151603933886,
+          "Y": 0.5230191760342916,
+          "X": 0.253713327618799
+        }
+      },
+      "colorfulness": 53.75347088319626,
+      "subband_entropy": {
+        "subband_entropy": 6.883028184286986,
+        "luminance_entropy": 7.000714243342814,
+        "chrom_a_entropy": 6.351865868158834,
+        "chrom_b_entropy": 6.178486880328951,
+        "luminance_entropy_total": 98.0099994067994,
+        "chrom_a_entropy_total": 88.92612215422368,
+        "chrom_b_entropy_total": 86.49881632460531,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.1661229133605957,
+        "color_harmony": 3.8647449016571045,
+        "colorfulness": 0.059067726135253906,
+        "subband_entropy": 2.2071170806884766
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 6,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/NotebookLM/high/modern_architecture/slide_images/slide_0007.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.8245451955469725,
+        "max": 0.9722508610802216,
+        "mean": 0.8757095665282293
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.4216806186792458,
+        "template_distances": {
+          "i": 32.05939618518645,
+          "V": 17.747280969423585,
+          "L": 9.933153545600867,
+          "mirror_L": 10.741032456746023,
+          "I": 3.8889592904460857,
+          "T": 3.074329781734333,
+          "Y": 1.0430144787542948,
+          "X": 0.4216806186792458
+        }
+      },
+      "colorfulness": 30.34545886996717,
+      "subband_entropy": {
+        "subband_entropy": 6.22425394945145,
+        "luminance_entropy": 6.163506326088817,
+        "chrom_a_entropy": 6.790143817606713,
+        "chrom_b_entropy": 6.2962141266038385,
+        "luminance_entropy_total": 86.28908856524345,
+        "chrom_a_entropy_total": 95.06201344649398,
+        "chrom_b_entropy_total": 88.14699777245374,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.08114480972290039,
+        "color_harmony": 3.9062740802764893,
+        "colorfulness": 0.059590816497802734,
+        "subband_entropy": 2.259842872619629
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 7,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/NotebookLM/high/modern_architecture/slide_images/slide_0008.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.8283091759150323,
+        "max": 0.891124556797758,
+        "mean": 0.8686614964313133
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.21645790334646545,
+        "template_distances": {
+          "i": 29.337439349981228,
+          "V": 15.091960859911731,
+          "L": 7.52775325313602,
+          "mirror_L": 7.16682310386234,
+          "I": 3.3040292324342317,
+          "T": 1.0446389812656816,
+          "Y": 0.6606939329962898,
+          "X": 0.21645790334646545
+        }
+      },
+      "colorfulness": 22.148789733658784,
+      "subband_entropy": {
+        "subband_entropy": 5.98393110339229,
+        "luminance_entropy": 5.807885613127559,
+        "chrom_a_entropy": 6.847061653937027,
+        "chrom_b_entropy": 6.969278200627238,
+        "luminance_entropy_total": 81.31039858378583,
+        "chrom_a_entropy_total": 95.85886315511839,
+        "chrom_b_entropy_total": 97.56989480878133,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.14760494232177734,
+        "color_harmony": 3.735879898071289,
+        "colorfulness": 0.08146977424621582,
+        "subband_entropy": 2.1370930671691895
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 8,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/NotebookLM/high/modern_architecture/slide_images/slide_0009.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.8411043852088287,
+        "max": 0.9401677056155217,
+        "mean": 0.9075335463212806
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.33086868530077446,
+        "template_distances": {
+          "i": 31.49917537618452,
+          "V": 15.860114443444296,
+          "L": 8.13045447528195,
+          "mirror_L": 10.109548764160959,
+          "I": 4.795008220930007,
+          "T": 1.470675870958816,
+          "Y": 0.7790834063754598,
+          "X": 0.33086868530077446
+        }
+      },
+      "colorfulness": 26.230225151291602,
+      "subband_entropy": {
+        "subband_entropy": 5.404772356786772,
+        "luminance_entropy": 5.372557198165201,
+        "chrom_a_entropy": 5.353526644972014,
+        "chrom_b_entropy": 5.794277234128025,
+        "luminance_entropy_total": 75.21580077431281,
+        "chrom_a_entropy_total": 74.9493730296082,
+        "chrom_b_entropy_total": 81.11988127779235,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.12920784950256348,
+        "color_harmony": 3.7475621700286865,
+        "colorfulness": 0.05407905578613281,
+        "subband_entropy": 2.1931798458099365
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 9,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/NotebookLM/high/modern_architecture/slide_images/slide_0010.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.7796159420568319,
+        "max": 0.8916986667473491,
+        "mean": 0.8241813292348691
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.24570504622198555,
+        "template_distances": {
+          "i": 24.06513244294138,
+          "V": 13.018968502957005,
+          "L": 7.371112009991161,
+          "mirror_L": 6.9746416401294375,
+          "I": 3.358668875479602,
+          "T": 1.8228811704419634,
+          "Y": 0.5977719457868037,
+          "X": 0.24570504622198555
+        }
+      },
+      "colorfulness": 16.43328916128678,
+      "subband_entropy": {
+        "subband_entropy": 5.155353629606324,
+        "luminance_entropy": 5.014072588524084,
+        "chrom_a_entropy": 5.494511257104278,
+        "chrom_b_entropy": 6.299646933471899,
+        "luminance_entropy_total": 70.19701623933717,
+        "chrom_a_entropy_total": 76.92315759945988,
+        "chrom_b_entropy_total": 88.19505706860659,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.16310691833496094,
+        "color_harmony": 3.7843570709228516,
+        "colorfulness": 0.07915401458740234,
+        "subband_entropy": 2.1152889728546143
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 10,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/NotebookLM/high/modern_architecture/slide_images/slide_0011.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.7947868026367031,
+        "max": 0.8907143702661986,
+        "mean": 0.8452105488437566
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.34609857405719563,
+        "template_distances": {
+          "i": 37.90179347428033,
+          "V": 18.976505642930213,
+          "L": 9.212868519712778,
+          "mirror_L": 8.82457474096302,
+          "I": 3.252995712044641,
+          "T": 0.6070483018327129,
+          "Y": 0.8789146134481087,
+          "X": 0.34609857405719563
+        }
+      },
+      "colorfulness": 27.187547246783055,
+      "subband_entropy": {
+        "subband_entropy": 5.663097608833169,
+        "luminance_entropy": 5.456417717849942,
+        "chrom_a_entropy": 6.7682050386506445,
+        "chrom_b_entropy": 6.72812903433958,
+        "luminance_entropy_total": 76.38984804989919,
+        "chrom_a_entropy_total": 94.75487054110903,
+        "chrom_b_entropy_total": 94.19380648075412,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.07854318618774414,
+        "color_harmony": 3.8154962062835693,
+        "colorfulness": 0.05651402473449707,
+        "subband_entropy": 2.192268133163452
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 11,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/NotebookLM/high/modern_architecture/slide_images/slide_0012.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.8482865705697069,
+        "max": 0.9015420757323028,
+        "mean": 0.8788025043890981
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.1450395558169353,
+        "template_distances": {
+          "i": 25.6370490817121,
+          "V": 13.258134809925997,
+          "L": 5.883373051466415,
+          "mirror_L": 5.829947113633321,
+          "I": 1.3273202823978094,
+          "T": 0.860215667041339,
+          "Y": 0.4306678511261422,
+          "X": 0.1450395558169353
+        }
+      },
+      "colorfulness": 56.88973085877014,
+      "subband_entropy": {
+        "subband_entropy": 6.2208175975869775,
+        "luminance_entropy": 6.101015806072601,
+        "chrom_a_entropy": 6.749704260362193,
+        "chrom_b_entropy": 6.949849745712716,
+        "luminance_entropy_total": 85.41422128501641,
+        "chrom_a_entropy_total": 94.4958596450707,
+        "chrom_b_entropy_total": 97.29789643997802,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.16120600700378418,
+        "color_harmony": 3.84417986869812,
+        "colorfulness": 0.05760812759399414,
+        "subband_entropy": 2.1449532508850098
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 12,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/NotebookLM/high/modern_architecture/slide_images/slide_0013.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.8394115816670069,
+        "max": 0.9999847113061746,
+        "mean": 0.9207116905099785
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.2862663785276497,
+        "template_distances": {
+          "i": 66.67254638624125,
+          "V": 33.62651586262933,
+          "L": 14.598401061786321,
+          "mirror_L": 14.45236014815049,
+          "I": 2.7172775666756115,
+          "T": 0.9176194629716432,
+          "Y": 0.9542471933553257,
+          "X": 0.2862663785276497
+        }
+      },
+      "colorfulness": 46.97302582661204,
+      "subband_entropy": {
+        "subband_entropy": 5.851133809839188,
+        "luminance_entropy": 5.744142198319807,
+        "chrom_a_entropy": 6.511032449675698,
+        "chrom_b_entropy": 6.314647090956172,
+        "luminance_entropy_total": 80.4179907764773,
+        "chrom_a_entropy_total": 91.15445429545977,
+        "chrom_b_entropy_total": 88.40505927338641,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.08663582801818848,
+        "color_harmony": 3.8143508434295654,
+        "colorfulness": 0.05293107032775879,
+        "subband_entropy": 2.2655189037323
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 13,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/NotebookLM/high/modern_architecture/slide_images/slide_0014.png"
+    },
+    {
+      "figure_ground_contrast": {
+        "min": 0.8704395794766905,
+        "max": 0.9763704399678719,
+        "mean": 0.9121631789395105
+      },
+      "color_harmony": {
+        "best_template": "X",
+        "best_distance": 0.45640578163337897,
+        "template_distances": {
+          "i": 54.533383089165284,
+          "V": 25.745210184510963,
+          "L": 9.683006507557847,
+          "mirror_L": 9.729836830684741,
+          "I": 6.48863279661084,
+          "T": 1.1809707907732319,
+          "Y": 1.485043443987992,
+          "X": 0.45640578163337897
+        }
+      },
+      "colorfulness": 38.02264022361158,
+      "subband_entropy": {
+        "subband_entropy": 6.060842949538856,
+        "luminance_entropy": 5.945423886449395,
+        "chrom_a_entropy": 6.770463335016992,
+        "chrom_b_entropy": 6.563122726500063,
+        "luminance_entropy_total": 83.23593441029152,
+        "chrom_a_entropy_total": 94.7864866902379,
+        "chrom_b_entropy_total": 91.88371817100088,
+        "n_subbands": {
+          "L": 14,
+          "a": 14,
+          "b": 14
+        }
+      },
+      "_timing": {
+        "figure_ground_contrast": 0.16602802276611328,
+        "color_harmony": 2.013704299926758,
+        "colorfulness": 0.046425819396972656,
+        "subband_entropy": 1.6879260540008545
+      },
+      "_metrics_requested": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "_metrics_selected": [
+        "color_harmony",
+        "colorfulness",
+        "figure_ground_contrast",
+        "subband_entropy"
+      ],
+      "slide_index": 14,
+      "slide_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/NotebookLM/high/modern_architecture/slide_images/slide_0015.png"
+    }
+  ],
+  "aggregated": {
+    "figure_ground_contrast": {
+      "mean": 0.871635517148846,
+      "std": 0.03272281544546837,
+      "min": 0.8083559607152874,
+      "max": 0.9207116905099785,
+      "slide_min_mean": 0.8197061379015366,
+      "slide_max_mean": 0.9219418710119788
+    },
+    "lab": {},
+    "hsv": {},
+    "color_harmony": {
+      "mean_distance": 0.3947978651189289,
+      "std_distance": 0.2841039323860723,
+      "min_distance": 0.016023250749432772,
+      "max_distance": 1.1567137532807084,
+      "deck_metrics": {
+        "mean_score": 0.6446201957151572,
+        "deck_consistency": 0.2900412550248875,
+        "final_score": 35.45789406902696
+      }
+    },
+    "colorfulness": {
+      "mean": 28.746267072365438,
+      "std": 14.993159946481107,
+      "min": 6.915167094190831,
+      "max": 56.88973085877014,
+      "pacing_score": 0.3760302371996782,
+      "pacing_normalization": {
+        "method": "gaussian",
+        "formula": "S_norm = exp(-((σ - μ_target)^2) / (2*w^2))",
+        "mu_target": 8.0,
+        "w": 5.0,
+        "sigma_pacing": 14.993159946481107
+      }
+    },
+    "subband_entropy": {
+      "mean": 5.917457827369049,
+      "std": 0.4537414594129633,
+      "min": 5.155353629606324,
+      "max": 6.883028184286986,
+      "mean_luminance": 5.810003224149298
+    },
+    "visual_hrv": {
+      "rmssd": 0.17638632672444565,
+      "overload_count": 2,
+      "overload_window": 3,
+      "overload_threshold": 0.75,
+      "overload_window_start_indices": [
+        5,
+        6
+      ],
+      "deltas": [
+        0.1545057762493468,
+        0.03142179996488714,
+        0.40154548156390907,
+        0.12696609346213433,
+        0.17426481753680967,
+        0.1926850815045753,
+        0.14070447451187118,
+        0.07379543691445145,
+        0.20955394795885357,
+        0.09078910319971051,
+        0.18729723955747857,
+        0.18586763219464753,
+        0.11801271941112312,
+        0.07001817364123075
+      ],
+      "final_score": 50.55453068977826,
+      "interpretation": "healthy_pulse",
+      "n_slides_used": 15,
+      "normalization": {
+        "method": "sigmoid",
+        "formula": "S(x) = 1 / (1 + exp(-k * (x - mu)))",
+        "mu": 5.5,
+        "k": 1.5,
+        "raw_scores": [
+          5.798505206246815,
+          6.285421374266974,
+          6.407790654097884,
+          5.214343160526343,
+          5.557246320795599,
+          6.051329505280116,
+          6.883028184286986,
+          6.22425394945145,
+          5.98393110339229,
+          5.404772356786772,
+          5.155353629606324,
+          5.663097608833169,
+          6.2208175975869775,
+          5.851133809839188,
+          6.060842949538856
+        ],
+        "normalized_scores": [
+          0.6101060009791913,
+          0.7646117772285381,
+          0.7960335771934253,
+          0.3944880956295162,
+          0.5214541890916505,
+          0.6957190066284602,
+          0.8884040881330355,
+          0.7476996136211643,
+          0.6739041767067129,
+          0.4643502287478593,
+          0.3735611255481488,
+          0.5608583651056274,
+          0.7467259973002749,
+          0.6287132778891518,
+          0.6987314515303825
+        ]
+      }
+    }
+  }
+}

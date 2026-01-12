@@ -8,16 +8,14 @@ This module calculates various aesthetic metrics for PowerPoint slides,
 adapted from webpage aesthetics metrics originally designed for GUI evaluation.
 
 Metrics included:
-- Figure-ground contrast (m5)
-- Subband entropy (m7)
-- Feature congestion (m8) - visual clutter measure
-- UMSI - Unified Model of Saliency and Importance (m9)
-- LAB color space statistics (m14)
-- HSV color space statistics (m16)
-- Color harmony (m20)
+- Figure-ground contrast - WCAG-based contrast ratio measurement
+- Color harmony - Distance to harmonic color templates
+- Colorfulness - Hasler & Süsstrunk's colorfulness measure
+- Subband entropy - Visual complexity via subband decomposition
+- Visual HRV - Presentation pacing based on RMSSD
 
 Author: PPT Evaluation System
-"""
+"
 
 import base64
 import gc
@@ -976,97 +974,6 @@ class FigureGroundContrastMetric:
         }
 
 
-class LABMetric:
-    """
-    Metric: LAB color space statistics.
-    
-    Computes average and standard deviation for L, A, B channels.
-    """
-
-    @classmethod
-    def execute(cls, img: Image.Image) -> Dict[str, float]:
-        """
-        Execute the LAB metric.
-        
-        Args:
-            img: PIL Image
-            
-        Returns:
-            Dictionary with L_avg, L_std, A_avg, A_std, B_avg, B_std
-        """
-        # Convert to RGB
-        img_rgb = img.convert("RGB")
-        img_rgb_nparray = np.array(img_rgb)
-        
-        # Convert to LAB using skimage for better accuracy
-        try:
-            from skimage import color
-            lab = color.rgb2lab(img_rgb_nparray, illuminant="D65", observer="2")
-        except ImportError:
-            # Fallback to OpenCV
-            img_bgr = cv2.cvtColor(img_rgb_nparray, cv2.COLOR_RGB2BGR)
-            lab = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2LAB).astype(np.float32)
-            # OpenCV LAB ranges: L: 0-255, A: 0-255, B: 0-255
-            # Convert to standard ranges: L: 0-100, A: -128 to 127, B: -128 to 127
-            lab[:, :, 0] = lab[:, :, 0] * 100 / 255
-            lab[:, :, 1] = lab[:, :, 1] - 128
-            lab[:, :, 2] = lab[:, :, 2] - 128
-        
-        L = lab[:, :, 0]
-        A = lab[:, :, 1]
-        B = lab[:, :, 2]
-        
-        return {
-            "L_avg": float(np.mean(L)),
-            "L_std": float(np.std(L)),
-            "A_avg": float(np.mean(A)),
-            "A_std": float(np.std(A)),
-            "B_avg": float(np.mean(B)),
-            "B_std": float(np.std(B)),
-        }
-
-
-class HSVMetric:
-    """
-    Metric: HSV color space statistics.
-    
-    Computes average and standard deviation for H, S, V channels.
-    """
-
-    @classmethod
-    def execute(cls, img: Image.Image) -> Dict[str, float]:
-        """
-        Execute the HSV metric.
-        
-        Args:
-            img: PIL Image
-            
-        Returns:
-            Dictionary with H_avg, S_avg, S_std, V_avg, V_std
-        """
-        # Convert to HSV
-        img_hsv = img.convert("HSV")
-        img_hsv_nparray = np.array(img_hsv) / 255.0
-        
-        img_hue = img_hsv_nparray[:, :, 0] * 359.0
-        img_saturation = img_hsv_nparray[:, :, 1]
-        img_value = img_hsv_nparray[:, :, 2]
-        
-        # Hue is circular, compute circular mean using native numpy (much faster)
-        hue_rad = np.deg2rad(img_hue)
-        hue_avg_sin = float(np.mean(np.sin(hue_rad)))
-        hue_avg_cos = float(np.mean(np.cos(hue_rad)))
-        hue_avg = float(atan2d(hue_avg_cos, hue_avg_sin))
-        
-        return {
-            "H_avg": hue_avg,
-            "S_avg": float(np.mean(img_saturation)),
-            "S_std": float(np.std(img_saturation)),
-            "V_avg": float(np.mean(img_value)),
-            "V_std": float(np.std(img_value)),
-        }
-
-
 def _compute_harmony_for_template_alpha(args: Tuple) -> Tuple[int, int, float]:
     """
     Helper function for parallel harmony computation.
@@ -1551,50 +1458,6 @@ class ColorHarmonyMetric:
         }
 
 
-class VisualComplexityMetric:
-    """
-    Metric: Visual complexity based on edge detection.
-    
-    Measures the visual complexity of an image using edge density.
-    """
-
-    @classmethod
-    def execute(cls, img: Image.Image) -> Dict[str, float]:
-        """
-        Execute the visual complexity metric.
-        
-        Args:
-            img: PIL Image
-            
-        Returns:
-            Dictionary with edge_density and complexity_score
-        """
-        # Convert to grayscale
-        img_gray = img.convert("L")
-        img_arr = np.array(img_gray)
-        
-        # Apply Gaussian blur
-        blurred = cv2.GaussianBlur(img_arr, (5, 5), 0)
-        
-        # Detect edges
-        edges = cv2.Canny(blurred, 50, 150)
-        
-        # Calculate edge density
-        total_pixels = edges.size
-        edge_pixels = np.count_nonzero(edges)
-        edge_density = edge_pixels / total_pixels
-        
-        # Calculate Laplacian variance (another complexity measure)
-        laplacian = cv2.Laplacian(img_arr, cv2.CV_64F)
-        laplacian_var = float(laplacian.var())
-        
-        return {
-            "edge_density": float(edge_density),
-            "laplacian_variance": laplacian_var,
-            "complexity_score": float(edge_density * 100 + laplacian_var / 100),
-        }
-
-
 class ColorfulnessMetric:
     """
     Metric: Colorfulness.
@@ -1879,259 +1742,6 @@ class SubbandEntropyMetric:
         return entropy_score, {
             "entropy_total": entropy_score,
             "entropy_gaussian_normalized": entropy_gaussian,
-        }
-
-
-class FeatureCongestionMetric:
-    """
-    Metric: Feature Congestion.
-    
-    Measures visual clutter based on color, contrast, and orientation congestion.
-    Based on Rosenholtz et al.'s work on measuring visual clutter.
-    Requires pyrtools library (macOS/Linux only).
-    """
-    
-    # Constants
-    _NUM_LEVELS = 3
-    _CONTRAST_FILT_SIGMA = 1
-    _CONTRAST_POOL_SIGMA = 3
-    _COLOR_POOL_SIGMA = 3
-    _ORIENT_POOL_SIGMA = 7 / 2
-    _ORIENT_NOISE = 0.001
-    _OPP_ENERGY_NOISE = 1.0
-    _OPP_ENERGY_FILTER_SCALE = 16 / 14 * 1.75
-    _OPP_ENERGY_POOL_SCALE = 1.75
-    _COLOR_COEF = 0.2088
-    _CONTRAST_COEF = 0.0660
-    _ORIENT_COEF = 0.0269
-    _MINKOWSKI_ORDER = 1.0
-    
-    # Class-level pyramid storage
-    _L_pyr = {}
-    _a_pyr = {}
-    _b_pyr = {}
-
-    @staticmethod
-    def _collapse(clutter_levels: List) -> np.ndarray:
-        """Collapse over scales by taking the maximum (vectorized)."""
-        try:
-            import pyrtools as pt
-        except ImportError:
-            raise ImportError("pyrtools is required for feature congestion metric")
-        
-        kernel_1d = np.array([[0.05, 0.25, 0.4, 0.25, 0.05]])
-        kernel_2d = conv2(kernel_1d, kernel_1d.T)
-        
-        clutter_map = clutter_levels[0].copy()
-        for scale in range(1, len(clutter_levels)):
-            clutter_here = clutter_levels[scale]
-            for kk in range(scale, 0, -1):
-                clutter_here = pt.upConv(
-                    image=clutter_here,
-                    filt=kernel_2d,
-                    edge_type="reflect1",
-                    step=[2, 2],
-                    start=[0, 0],
-                )
-            # Use vectorized numpy maximum instead of nested loops
-            common_sz = (min(clutter_map.shape[0], clutter_here.shape[0]),
-                        min(clutter_map.shape[1], clutter_here.shape[1]))
-            clutter_map[:common_sz[0], :common_sz[1]] = np.maximum(
-                clutter_map[:common_sz[0], :common_sz[1]],
-                clutter_here[:common_sz[0], :common_sz[1]]
-            )
-        return clutter_map
-
-    @classmethod
-    def _color_clutter(cls) -> np.ndarray:
-        """Compute the color clutter map."""
-        covMx = {}
-        color_clutter_levels = [0] * cls._NUM_LEVELS
-        DL = [0] * cls._NUM_LEVELS
-        Da = [0] * cls._NUM_LEVELS
-        Db = [0] * cls._NUM_LEVELS
-        
-        deltaL2 = 0.0007**2
-        deltaa2 = 0.1**2
-        deltab2 = 0.05**2
-        
-        bigG = RRgaussfilter1D(round(2 * cls._COLOR_POOL_SIGMA), cls._COLOR_POOL_SIGMA)
-        
-        for i in range(cls._NUM_LEVELS):
-            DL[i] = RRoverlapconv(bigG, cls._L_pyr[(i, 0)])
-            DL[i] = RRoverlapconv(bigG.T, DL[i])
-            Da[i] = RRoverlapconv(bigG, cls._a_pyr[(i, 0)])
-            Da[i] = RRoverlapconv(bigG.T, Da[i])
-            Db[i] = RRoverlapconv(bigG, cls._b_pyr[(i, 0)])
-            Db[i] = RRoverlapconv(bigG.T, Db[i])
-            
-            covMx[(i, 0, 0)] = RRoverlapconv(bigG, cls._L_pyr[(i, 0)] ** 2)
-            covMx[(i, 0, 0)] = RRoverlapconv(bigG.T, covMx[(i, 0, 0)]) - DL[i] ** 2 + deltaL2
-            covMx[(i, 0, 1)] = RRoverlapconv(bigG, cls._L_pyr[(i, 0)] * cls._a_pyr[(i, 0)])
-            covMx[(i, 0, 1)] = RRoverlapconv(bigG.T, covMx[(i, 0, 1)]) - DL[i] * Da[i]
-            covMx[(i, 0, 2)] = RRoverlapconv(bigG, cls._L_pyr[(i, 0)] * cls._b_pyr[(i, 0)])
-            covMx[(i, 0, 2)] = RRoverlapconv(bigG.T, covMx[(i, 0, 2)]) - DL[i] * Db[i]
-            covMx[(i, 1, 1)] = RRoverlapconv(bigG, cls._a_pyr[(i, 0)] ** 2)
-            covMx[(i, 1, 1)] = RRoverlapconv(bigG.T, covMx[(i, 1, 1)]) - Da[i] ** 2 + deltaa2
-            covMx[(i, 1, 2)] = RRoverlapconv(bigG, cls._a_pyr[(i, 0)] * cls._b_pyr[(i, 0)])
-            covMx[(i, 1, 2)] = RRoverlapconv(bigG.T, covMx[(i, 1, 2)]) - Da[i] * Db[i]
-            covMx[(i, 2, 2)] = RRoverlapconv(bigG, cls._b_pyr[(i, 0)] ** 2)
-            covMx[(i, 2, 2)] = RRoverlapconv(bigG.T, covMx[(i, 2, 2)]) - Db[i] ** 2 + deltab2
-            
-            detIm = (
-                covMx[(i, 0, 0)] * (covMx[(i, 1, 1)] * covMx[(i, 2, 2)] - covMx[(i, 1, 2)] * covMx[(i, 1, 2)])
-                - covMx[(i, 0, 1)] * (covMx[(i, 0, 1)] * covMx[(i, 2, 2)] - covMx[(i, 1, 2)] * covMx[(i, 0, 2)])
-                + covMx[(i, 0, 2)] * (covMx[(i, 0, 1)] * covMx[(i, 1, 2)] - covMx[(i, 1, 1)] * covMx[(i, 0, 2)])
-            )
-            color_clutter_levels[i] = np.sqrt(np.abs(detIm)) ** (1 / 3)
-        
-        return cls._collapse(color_clutter_levels)
-
-    @classmethod
-    def _contrast_clutter(cls) -> np.ndarray:
-        """Compute the contrast clutter map."""
-        contrast = RRcontrast1channel(cls._L_pyr, 1)
-        contrast_clutter_levels = [0] * cls._NUM_LEVELS
-        bigG = RRgaussfilter1D(round(6), 3)
-        
-        for scale in range(cls._NUM_LEVELS):
-            meanD = RRoverlapconv(bigG, contrast[scale])
-            meanD = RRoverlapconv(bigG.T, meanD)
-            meanD2 = RRoverlapconv(bigG, contrast[scale] ** 2)
-            meanD2 = RRoverlapconv(bigG.T, meanD2)
-            stddevD = np.sqrt(np.abs(meanD2 - meanD**2))
-            contrast_clutter_levels[scale] = stddevD
-        
-        return cls._collapse(contrast_clutter_levels)
-
-    @classmethod
-    def _rr_orientation_opp_energy(cls) -> list:
-        """Compute oriented opponent energy."""
-        hvdd = [0] * cls._NUM_LEVELS
-        hv = [0] * cls._NUM_LEVELS
-        dd = [0] * cls._NUM_LEVELS
-        out = [0] * cls._NUM_LEVELS
-        total = [0] * cls._NUM_LEVELS
-        
-        for scale in range(cls._NUM_LEVELS):
-            hvdd[scale] = orient_filtnew(cls._L_pyr[(scale, 0)], cls._OPP_ENERGY_FILTER_SCALE)
-            hvdd[scale] = [x**2 for x in hvdd[scale]]
-            hvdd[scale] = poolnew(hvdd[scale], cls._OPP_ENERGY_POOL_SCALE)
-            hv[scale] = HV(hvdd[scale])
-            dd[scale] = DD(hvdd[scale])
-            total[scale] = sumorients(hvdd[scale]) + cls._OPP_ENERGY_NOISE
-            hv[scale] = hv[scale] / total[scale]
-            dd[scale] = dd[scale] / total[scale]
-            out[scale] = (hv[scale], dd[scale])
-        return out
-
-    @classmethod
-    def _orientation_clutter(cls) -> np.ndarray:
-        """Compute the orientation clutter map."""
-        Dc = [0] * cls._NUM_LEVELS
-        Ds = [0] * cls._NUM_LEVELS
-        angles = cls._rr_orientation_opp_energy()
-        bigG = RRgaussfilter1D(round(8 * cls._ORIENT_POOL_SIGMA), 4 * cls._ORIENT_POOL_SIGMA)
-        
-        covMx = {}
-        orientation_clutter_levels = [0] * cls._NUM_LEVELS
-        
-        for i in range(cls._NUM_LEVELS):
-            cmx = angles[i][0]
-            smx = angles[i][1]
-            
-            Dc[i] = RRoverlapconv(bigG, cmx)
-            Dc[i] = RRoverlapconv(bigG.T, Dc[i])
-            Ds[i] = RRoverlapconv(bigG, smx)
-            Ds[i] = RRoverlapconv(bigG.T, Ds[i])
-            
-            covMx[(i, 0, 0)] = RRoverlapconv(bigG, cmx**2)
-            covMx[(i, 0, 0)] = RRoverlapconv(bigG.T, covMx[(i, 0, 0)]) - Dc[i] ** 2 + cls._ORIENT_NOISE
-            covMx[(i, 0, 1)] = RRoverlapconv(bigG, cmx * smx)
-            covMx[(i, 0, 1)] = RRoverlapconv(bigG.T, covMx[(i, 0, 1)]) - Dc[i] * Ds[i]
-            covMx[(i, 1, 1)] = RRoverlapconv(bigG, smx**2)
-            covMx[(i, 1, 1)] = RRoverlapconv(bigG.T, covMx[(i, 1, 1)]) - Ds[i] ** 2 + cls._ORIENT_NOISE
-            
-            detIm = covMx[(i, 0, 0)] * covMx[(i, 1, 1)] - covMx[(i, 0, 1)] ** 2
-            orientation_clutter_levels[i] = np.abs(detIm) ** (1 / 4)
-        
-        return cls._collapse(orientation_clutter_levels)
-
-    @classmethod
-    def execute(cls, img: Image.Image, max_pixels: int = 5000000) -> Dict[str, Any]:
-        """
-        Execute the feature congestion metric.
-        
-        Args:
-            img: PIL Image
-            max_pixels: Maximum pixels to process (image will be resized if larger)
-            
-        Returns:
-            Dictionary with feature_congestion score and component scores
-        """
-        try:
-            import pyrtools as pt
-        except ImportError:
-            return {"error": "pyrtools not available", "feature_congestion": None}
-        
-        from concurrent.futures import ThreadPoolExecutor
-        
-        # Resize image if too large to reduce computation
-        img_rgb = img.convert("RGB")
-        width, height = img_rgb.size
-        n_pixels = width * height
-        
-        if n_pixels > max_pixels:
-            scale = (max_pixels / n_pixels) ** 0.5
-            new_width = int(width * scale)
-            new_height = int(height * scale)
-            img_rgb = img_rgb.resize((new_width, new_height), Image.LANCZOS)
-        
-        img_rgb_nparray = np.array(img_rgb)
-        
-        # Convert to LAB
-        lab = rgb2lab_clutter(img_rgb_nparray)
-        lab_float = lab.astype(np.float32)
-        
-        L = lab_float[:, :, 0]
-        a = lab_float[:, :, 1]
-        b = lab_float[:, :, 2]
-        
-        # Build Gaussian pyramids
-        pyr = pt.pyramids.GaussianPyramid(L, height=cls._NUM_LEVELS)
-        cls._L_pyr = pyr.pyr_coeffs
-        pyr = pt.pyramids.GaussianPyramid(a, height=cls._NUM_LEVELS)
-        cls._a_pyr = pyr.pyr_coeffs
-        pyr = pt.pyramids.GaussianPyramid(b, height=cls._NUM_LEVELS)
-        cls._b_pyr = pyr.pyr_coeffs
-        
-        # Compute clutter maps in parallel
-        with ThreadPoolExecutor(max_workers=3) as executor:
-            color_future = executor.submit(cls._color_clutter)
-            contrast_future = executor.submit(cls._contrast_clutter)
-            orientation_future = executor.submit(cls._orientation_clutter)
-            
-            color_clutter_map = color_future.result()
-            contrast_clutter_map = contrast_future.result()
-            orientation_clutter_map = orientation_future.result()
-        
-        # Combine clutter maps
-        clutter_map_fc = (
-            color_clutter_map / cls._COLOR_COEF
-            + contrast_clutter_map / cls._CONTRAST_COEF
-            + orientation_clutter_map / cls._ORIENT_COEF
-        )
-        
-        # Compute scalar measure
-        clutter_scalar_fc = float(
-            np.mean(clutter_map_fc**cls._MINKOWSKI_ORDER) ** (1 / cls._MINKOWSKI_ORDER)
-        )
-        
-        return {
-            "feature_congestion": clutter_scalar_fc,
-            "color_clutter": float(np.mean(color_clutter_map)),
-            "contrast_clutter": float(np.mean(contrast_clutter_map)),
-            "orientation_clutter": float(np.mean(orientation_clutter_map)),
         }
 
 
@@ -2444,10 +2054,7 @@ class SlideAestheticsCalculator:
 
         self._all_metrics = {
             "figure_ground_contrast",
-            "lab",
-            "hsv",
             "color_harmony",
-            "visual_complexity",
             "colorfulness",
             "subband_entropy",
         }
@@ -2507,28 +2114,6 @@ class SlideAestheticsCalculator:
                 logger.warning(f"Failed to calculate figure-ground contrast: {e}")
                 metrics["figure_ground_contrast"] = None
         
-        # LAB statistics
-        if _want("lab"):
-            try:
-                start = time.time()
-                metrics["lab"] = LABMetric.execute(img)
-                timing["lab"] = time.time() - start
-                # logger.info(f"LAB took {timing['lab']:.3f}s")
-            except Exception as e:
-                logger.warning(f"Failed to calculate LAB metrics: {e}")
-                metrics["lab"] = None
-        
-        # HSV statistics
-        if _want("hsv"):
-            try:
-                start = time.time()
-                metrics["hsv"] = HSVMetric.execute(img)
-                timing["hsv"] = time.time() - start
-                # logger.info(f"HSV took {timing['hsv']:.3f}s")
-            except Exception as e:
-                logger.warning(f"Failed to calculate HSV metrics: {e}")
-                metrics["hsv"] = None
-        
         # Color harmony (parallel version for better performance)
         if _want("color_harmony"):
             try:
@@ -2539,17 +2124,6 @@ class SlideAestheticsCalculator:
             except Exception as e:
                 logger.warning(f"Failed to calculate color harmony: {e}")
                 metrics["color_harmony"] = None
-        
-        # Visual complexity
-        if _want("visual_complexity"):
-            try:
-                start = time.time()
-                metrics["visual_complexity"] = VisualComplexityMetric.execute(img)
-                timing["visual_complexity"] = time.time() - start
-                # logger.info(f"VisualComplexity took {timing['visual_complexity']:.3f}s")
-            except Exception as e:
-                logger.warning(f"Failed to calculate visual complexity: {e}")
-                metrics["visual_complexity"] = None
         
         # Colorfulness
         if _want("colorfulness"):
@@ -2749,42 +2323,6 @@ class SlideAestheticsCalculator:
             if fgc_max_values:
                 aggregated["figure_ground_contrast"]["slide_max_mean"] = float(np.mean(fgc_max_values))
         
-        # LAB averages
-        lab_keys = ["L_avg", "L_std", "A_avg", "A_std", "B_avg", "B_std"]
-        lab_values = {k: [] for k in lab_keys}
-        for m in slide_metrics:
-            lab = m.get("lab")
-            if lab:
-                for k in lab_keys:
-                    if k in lab:
-                        lab_values[k].append(lab[k])
-        
-        aggregated["lab"] = {}
-        for k, values in lab_values.items():
-            if values:
-                aggregated["lab"][k] = {
-                    "mean": float(np.mean(values)),
-                    "std": float(np.std(values)),
-                }
-        
-        # HSV averages
-        hsv_keys = ["H_avg", "S_avg", "S_std", "V_avg", "V_std"]
-        hsv_values = {k: [] for k in hsv_keys}
-        for m in slide_metrics:
-            hsv = m.get("hsv")
-            if hsv:
-                for k in hsv_keys:
-                    if k in hsv:
-                        hsv_values[k].append(hsv[k])
-        
-        aggregated["hsv"] = {}
-        for k, values in hsv_values.items():
-            if values:
-                aggregated["hsv"][k] = {
-                    "mean": float(np.mean(values)),
-                    "std": float(np.std(values)),
-                }
-        
         # Color harmony
         harmony_distances = [m["color_harmony"]["best_distance"] 
                             for m in slide_metrics 
@@ -2811,24 +2349,6 @@ class SlideAestheticsCalculator:
             
             # Store raw distances for each slide
             aggregated["color_harmony"]["raw_distances"] = harmony_distances
-        
-        # Visual complexity
-        complexity_values = []
-        edge_density_values = []
-        for m in slide_metrics:
-            vc = m.get("visual_complexity")
-            if vc:
-                if "complexity_score" in vc:
-                    complexity_values.append(vc["complexity_score"])
-                if "edge_density" in vc:
-                    edge_density_values.append(vc["edge_density"])
-        
-        if complexity_values:
-            aggregated["visual_complexity"] = {
-                "mean_complexity": float(np.mean(complexity_values)),
-                "std_complexity": float(np.std(complexity_values)),
-                "mean_edge_density": float(np.mean(edge_density_values)) if edge_density_values else None,
-            }
         
         # Colorfulness
         colorfulness_values = [m["colorfulness"] for m in slide_metrics 
@@ -2891,59 +2411,6 @@ class SlideAestheticsCalculator:
             }
             if se_luminance_values:
                 aggregated["subband_entropy"]["mean_luminance"] = float(np.mean(se_luminance_values))
-        
-        # Feature Congestion
-        fc_clutter_values = []
-        fc_color_values = []
-        fc_orientation_values = []
-        fc_luminance_values = []
-        for m in slide_metrics:
-            fc = m.get("feature_congestion")
-            if fc:
-                if "clutter" in fc:
-                    fc_clutter_values.append(fc["clutter"])
-                if "color_congestion" in fc:
-                    fc_color_values.append(fc["color_congestion"])
-                if "orientation_congestion" in fc:
-                    fc_orientation_values.append(fc["orientation_congestion"])
-                if "luminance_congestion" in fc:
-                    fc_luminance_values.append(fc["luminance_congestion"])
-        
-        if fc_clutter_values:
-            aggregated["feature_congestion"] = {
-                "mean_clutter": float(np.mean(fc_clutter_values)),
-                "std_clutter": float(np.std(fc_clutter_values)),
-                "min_clutter": float(np.min(fc_clutter_values)),
-                "max_clutter": float(np.max(fc_clutter_values)),
-            }
-            if fc_color_values:
-                aggregated["feature_congestion"]["mean_color_congestion"] = float(np.mean(fc_color_values))
-            if fc_orientation_values:
-                aggregated["feature_congestion"]["mean_orientation_congestion"] = float(np.mean(fc_orientation_values))
-            if fc_luminance_values:
-                aggregated["feature_congestion"]["mean_luminance_congestion"] = float(np.mean(fc_luminance_values))
-        
-        # UMSI (Saliency)
-        umsi_fixations = []
-        umsi_entropy = []
-        for m in slide_metrics:
-            umsi = m.get("umsi")
-            if umsi:
-                if "predicted_fixations" in umsi:
-                    umsi_fixations.append(umsi["predicted_fixations"])
-                if "saliency_entropy" in umsi:
-                    umsi_entropy.append(umsi["saliency_entropy"])
-        
-        if umsi_fixations:
-            aggregated["umsi"] = {
-                "mean_predicted_fixations": float(np.mean(umsi_fixations)),
-                "std_predicted_fixations": float(np.std(umsi_fixations)),
-                "min_predicted_fixations": float(np.min(umsi_fixations)),
-                "max_predicted_fixations": float(np.max(umsi_fixations)),
-            }
-            if umsi_entropy:
-                aggregated["umsi"]["mean_saliency_entropy"] = float(np.mean(umsi_entropy))
-                aggregated["umsi"]["std_saliency_entropy"] = float(np.std(umsi_entropy))
 
         # ------------------------------------------------------------------
         # Visual HRV (RMSSD pacing) over per-slide scores S_i in [0,1]

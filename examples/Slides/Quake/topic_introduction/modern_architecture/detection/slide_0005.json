@@ -1,0 +1,39 @@
+{
+    "input_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/Quake/high/modern_architecture/slide_images/slide_0005.png",
+    "page_index": null,
+    "boxes": [
+        {
+            "cls_id": 5,
+            "label": "content",
+            "score": 0.7080761790275574,
+            "coordinate": [
+                120.43984985351562,
+                348.7987976074219,
+                936.3624267578125,
+                938.1351928710938
+            ]
+        },
+        {
+            "cls_id": 5,
+            "label": "content",
+            "score": 0.6476083397865295,
+            "coordinate": [
+                1069.2177734375,
+                352.33270263671875,
+                1883.679931640625,
+                932.8231811523438
+            ]
+        },
+        {
+            "cls_id": 5,
+            "label": "content",
+            "score": 0.600640594959259,
+            "coordinate": [
+                119.45006561279297,
+                344.9777526855469,
+                1888.2550048828125,
+                937.8583374023438
+            ]
+        }
+    ]
+}

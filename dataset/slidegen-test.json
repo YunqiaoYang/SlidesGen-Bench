@@ -14,7 +14,7 @@
         "total_image_count": 23,
         "avg_words_per_page": 218.5,
         "visual_density": 17.54,
-        "complexity_level": "Low"
+        "complexity_level": "Medium"
       },
       "one_sentence": "Generate a PowerPoint presentation for World Kidney Day 2018 'Kidneys & Women's Health' campaign used for brand promotion and global health awareness raising.",
       "quiz_data": {
@@ -14876,6 +14876,223 @@
               "statement": "NVIDIA is releasing NIM microservices and AI Blueprints to help developers build AI agents and assistants optimized for RTX AI PCs.",
               "source_quote": "Showcasing how RTX enthusiasts and developers can use NVIDIA NIM microservices to build AI agents and assistants, NVIDIA will release a pipeline of NIM microservices and AI Blueprints for RTX AI PCs",
               "location": "[=== PAGE 2 START ===]"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "meta_info": {
+        "filename": "Our_New_SAM_Audio_Model_Transforms_Audio_Editing_raw_filtered.pdf",
+        "source_path": "./product_launch/Our_New_SAM_Audio_Model_Transforms_Audio_Editing/Our_New_SAM_Audio_Model_Transforms_Audio_Editing_raw_filtered.pdf",
+        "domain": "product_launch"
+      },
+      "statistics": {
+        "total_pages": 4,
+        "total_word_count": 505,
+        "total_image_count": 4,
+        "avg_words_per_page": 126.25,
+        "visual_density": 7.92,
+        "complexity_level": "Low"
+      },
+      "one_sentence": "Generate a PowerPoint presentation aimed to promote and launch our SAM Audio product.",
+      "quiz_data": {
+        "quiz_count": 10,
+        "quiz_bank": [
+          {
+            "id": 1,
+            "type": "Data",
+            "question": "According to the official announcement, what is the launch date for the SAM Audio product?",
+            "options": [
+              "A. December 1, 2025",
+              "B. December 16, 2025",
+              "C. January 6, 2026",
+              "D. February 10, 2026"
+            ],
+            "correct_answer": "B",
+            "explanation": "Based on Page 1: 'The official launch date for the SAM Audio product is December 16, 2025.'"
+          },
+          {
+            "id": 2,
+            "type": "Data",
+            "question": "Which three specific types of input prompts is SAM Audio engineered to support?",
+            "options": [
+              "A. Text, Visual, and Span",
+              "B. Audio, Frequency, and Time",
+              "C. Voice, Gesture, and Click",
+              "D. Manual, Automatic, and Hybrid"
+            ],
+            "correct_answer": "A",
+            "explanation": "Based on Page 2: 'SAM Audio supports three kinds of prompts... Text, Visual, and Span.'"
+          },
+          {
+            "id": 3,
+            "type": "Concept",
+            "question": "Which specific capability of SAM Audio is technically classified as an 'industry first'?",
+            "options": [
+              "A. The ability to process text prompts",
+              "B. The span prompting method for marking time segments",
+              "C. The browser-based testing environment",
+              "D. The integration with video editing software"
+            ],
+            "correct_answer": "B",
+            "explanation": "Based on Page 3: 'An industry first, this method lets you mark time segments where target audio occurs.'"
+          },
+          {
+            "id": 4,
+            "type": "Concept",
+            "question": "How does SAM Audio differentiate itself from previous single-purpose audio tools?",
+            "options": [
+              "A. By focusing exclusively on text-to-speech synthesis",
+              "B. By operating solely as a downloadable desktop application",
+              "C. By acting as a unified model that mimics natural human audio perception",
+              "D. By restricting inputs to visual data only"
+            ],
+            "correct_answer": "C",
+            "explanation": "Based on Page 2: 'As a unified model, SAM Audio is the first to support use cases that match how people naturally think about audio'"
+          },
+          {
+            "id": 5,
+            "type": "Concept",
+            "question": "How does the 'Visual' prompting functionality allow users to interact with media?",
+            "options": [
+              "A. By analyzing the color spectrum of the entire video",
+              "B. By clicking on a person or object in the video to isolate their sound",
+              "C. By drawing a bounding box around the subtitles",
+              "D. By automatically removing the video track to leave only audio"
+            ],
+            "correct_answer": "B",
+            "explanation": "Based on Page 2: 'Click on the person or object in the video that’s making a sound to isolate their audio.'"
+          },
+          {
+            "id": 6,
+            "type": "Concept",
+            "question": "Which statement accurately describes the operational flexibility regarding the usage of prompting methods in SAM Audio?",
+            "options": [
+              "A. Methods must be used sequentially starting with Text",
+              "B. Only one method can be active at any given time",
+              "C. Methods can be used alone or in any combination for precise control",
+              "D. Visual prompting is mandatory for all operations"
+            ],
+            "correct_answer": "C",
+            "explanation": "Based on Page 4: 'These prompting methods can be used alone or in any combination, giving you precise and intuitive control over how audio is separated.'"
+          },
+          {
+            "id": 7,
+            "type": "Data",
+            "question": "What testing capabilities are available in the Segment Anything Playground as of the launch day?",
+            "options": [
+              "A. Users can only view static images of the software interface",
+              "B. Users can select from stock assets or upload their own media",
+              "C. Users are restricted to text-only prompting",
+              "D. Users must request beta access to enter the Playground"
+            ],
+            "correct_answer": "B",
+            "explanation": "Based on Page 4: 'Starting today, people can select from our collection of audio and video assets or upload their own to explore the capabilities of SAM Audio.'"
+          },
+          {
+            "id": 8,
+            "type": "Concept",
+            "question": "How are the developers currently utilizing SAM Audio internally?",
+            "options": [
+              "A. To automate customer support voice responses",
+              "B. To help build the next generation of creative media tools",
+              "C. To analyze competitor audio products",
+              "D. To transcribe historical audio archives exclusively"
+            ],
+            "correct_answer": "B",
+            "explanation": "Based on Page 4: 'we’re already using SAM Audio to help build the next generation of creative media tools.'"
+          },
+          {
+            "id": 9,
+            "type": "Concept",
+            "question": "What specific claim does the company make regarding SAM Audio's market position?",
+            "options": [
+              "A. It is the most cost-effective solution for students",
+              "B. It is the fastest model for real-time broadcasting",
+              "C. It is the all-around best audio separation model available",
+              "D. It is the only model compatible with mobile devices"
+            ],
+            "correct_answer": "C",
+            "explanation": "Based on Page 4: 'we believe SAM Audio is the all-around best audio separation model available.'"
+          },
+          {
+            "id": 10,
+            "type": "Concept",
+            "question": "Which sectors are explicitly cited as areas where SAM Audio has the potential to drive innovation?",
+            "options": [
+              "A. Automotive engineering and aerospace",
+              "B. Financial services and banking",
+              "C. Scientific research and accessibility",
+              "D. Retail management and logistics"
+            ],
+            "correct_answer": "C",
+            "explanation": "Based on Page 1: 'This technology has the potential to... drive innovation in areas like music, podcasting, television, film, scientific research, accessibility, and more.'"
+          }
+        ],
+        "evidence_used": {
+          "quantitative_anchors": [
+            {
+              "statement": "The official launch date for the SAM Audio product is December 16, 2025.",
+              "source_quote": "December 16, 2025",
+              "location": "[=== PAGE 1 START ===]"
+            },
+            {
+              "statement": "SAM Audio is engineered to support exactly three distinct types of input prompts: Text, Visual, and Span.",
+              "source_quote": "SAM Audio supports three kinds of prompts",
+              "location": "[=== PAGE 2 START ===]"
+            },
+            {
+              "statement": "The Span prompting feature is technically classified as an 'industry first' capability for marking time segments.",
+              "source_quote": "An industry first, this method lets you mark time segments where target audio occurs.",
+              "location": "[=== PAGE 3 START ===]"
+            },
+            {
+              "statement": "Immediate availability is confirmed for both model download and browser-based testing via the Segment Anything Playground as of the announcement day.",
+              "source_quote": "You can download SAM Audio or explore its capabilities in the Segment Anything\nPlayground today.",
+              "location": "[=== PAGE 1 START ===]"
+            }
+          ],
+          "qualitative_key_points": [
+            {
+              "statement": "SAM Audio differentiates itself as the first unified model capable of processing complex audio mixtures using multi-modal inputs (text, visual, and time) rather than single-mode inputs.",
+              "source_quote": "SAM Audio is the first unified AI model that can segment sound from complex audio\nmixtures using text, visual, and time span prompts.",
+              "location": "[=== PAGE 1 START ===]"
+            },
+            {
+              "statement": "The product architecture addresses the market problem of fragmentation by replacing single-purpose tools with a unified solution that mimics natural human audio perception.",
+              "source_quote": "As a unified model, SAM Audio is the first to support use\ncases that match how people naturally think about audio",
+              "location": "[=== PAGE 2 START ===]"
+            },
+            {
+              "statement": "Visual prompting functionality allows users to isolate audio tracks by spatially interacting with video elements, such as clicking on a specific subject.",
+              "source_quote": "Click on the person or object in the video that’s making a sound to isolate their audio.",
+              "location": "[=== PAGE 2 START ===]"
+            },
+            {
+              "statement": "The system offers high operational flexibility by allowing the three prompting methods to be utilized individually or in any combination for precise isolation.",
+              "source_quote": "These prompting methods can be used alone or in any combination, giving you precise and intuitive\ncontrol over how audio is separated.",
+              "location": "[=== PAGE 4 START ===]"
+            },
+            {
+              "statement": "The developers are actively integrating SAM Audio into their internal workflows to develop future creative media tools.",
+              "source_quote": "we’re already using SAM Audio to help build the next generation of creative media tools.",
+              "location": "[=== PAGE 4 START ===]"
+            },
+            {
+              "statement": "The Segment Anything Playground serves as a new testing environment where users can validate the model using either stock assets or their own uploaded media.",
+              "source_quote": "Starting today, people can select from our collection of audio and video\nassets or upload their own to explore the capabilities of SAM Audio.",
+              "location": "[=== PAGE 4 START ===]"
+            },
+            {
+              "statement": "The company asserts that SAM Audio is currently the superior solution in the market for audio separation.",
+              "source_quote": "we believe SAM Audio is the all-around best audio separation model available.",
+              "location": "[=== PAGE 4 START ===]"
+            },
+            {
+              "statement": "The technology is positioned to drive innovation across a wide spectrum of industries, specifically citing media production, scientific research, and accessibility.",
+              "source_quote": "This technology has the potential to transform audio and video editing and drive innovation\nin areas like music, podcasting, television, film, scientific research, accessibility, and more.",
+              "location": "[=== PAGE 1 START ===]"
             }
           ]
         }
@@ -36167,6 +36384,218 @@
               "statement": "Effective implementation of diversity programs requires a structured process involving audits, strategic action plans, stakeholder input, and accountability for results.",
               "source_quote": "This process includes analyzing where the organization is currently at through a diversity audit, creating an action plan aligned with a diversity inclusion strategy, gaining support by seeking stakeholder input, and holding individuals accountable through measurable results.",
               "location": "[=== PAGE 4 START ===]"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "meta_info": {
+        "filename": "real_estate_market.pdf",
+        "source_path": "./topic_introduction/real_estate_market/real_estate_market/real_estate_market/real_estate_market.pdf",
+        "domain": "topic_introduction"
+      },
+      "statistics": {
+        "total_pages": 1,
+        "total_word_count": 383,
+        "total_image_count": 0,
+        "avg_words_per_page": 383.0,
+        "visual_density": 0.0,
+        "complexity_level": "Low"
+      },
+      "one_sentence": "Generate a PowerPoint presentation introducing Real Estate Market.",
+      "quiz_data": {
+        "quiz_count": 10,
+        "quiz_bank": [
+          {
+            "id": 1,
+            "type": "Data",
+            "question": "Which organization commissioned the OECD study aimed at identifying and possibly reducing transaction costs?",
+            "options": [
+              "A. The United Nations",
+              "B. The European Commission",
+              "C. The System of National Accounts",
+              "D. The Nordic Council"
+            ],
+            "correct_answer": "B",
+            "explanation": "Based on Page 1: 'To identify and possibly reduce these transaction costs, the Organisation for Economic Co-operation and Development (OECD) addressed the issue through a study commissioned by the European Commission...'"
+          },
+          {
+            "id": 2,
+            "type": "Data",
+            "question": "For which two countries were national property transaction costs specifically estimated using the System of National Accounts?",
+            "options": [
+              "A. Sweden and Norway",
+              "B. The United Kingdom and the United States",
+              "C. Finland and Denmark",
+              "D. Iceland and Finland"
+            ],
+            "correct_answer": "C",
+            "explanation": "Based on Page 1: 'national property transaction costs were estimated for Finland and Denmark based on the directions of the System of National Accounts.'"
+          },
+          {
+            "id": 3,
+            "type": "Data",
+            "question": "What two formats were utilized to describe transactions in the research action?",
+            "options": [
+              "A. A Basic Use Case template and the Unified Modeling Language",
+              "B. A flowchart diagram and Python scripts",
+              "C. Statistical regression models and qualitative surveys",
+              "D. Narrative essays and Excel spreadsheets"
+            ],
+            "correct_answer": "A",
+            "explanation": "Based on Page 1: 'Descriptions were performed both using a more simple format, a Basic Use Case template, and more advanced applications of the Unified Modeling Language.'"
+          },
+          {
+            "id": 4,
+            "type": "Data",
+            "question": "Which specific types of real estate transactions within the five Nordic countries are described in the study?",
+            "options": [
+              "A. Commercial leasing, residential renting, and industrial sales",
+              "B. Subdivision, conveyance, and mortgaging",
+              "C. Property management, valuation, and taxation",
+              "D. Inheritance, gifting, and foreclosure"
+            ],
+            "correct_answer": "B",
+            "explanation": "Based on Page 1: 'Real estate transactions: subdivision, conveyance, and mortgaging, as they are performed in the five Nordic countries, are described in some detail.'"
+          },
+          {
+            "id": 5,
+            "type": "Data",
+            "question": "For which specific section of the transaction descriptions is an English translation available?",
+            "options": [
+              "A. The Finnish part",
+              "B. The Swedish part",
+              "C. The Norwegian part",
+              "D. The Danish part"
+            ],
+            "correct_answer": "D",
+            "explanation": "Based on Page 1: 'A translation into English is available for the Danish part.'"
+          },
+          {
+            "id": 6,
+            "type": "Concept",
+            "question": "In the context of real estate intermediaries, what title is commonly used in the United Kingdom?",
+            "options": [
+              "A. Realtor",
+              "B. Real estate agent",
+              "C. Estate agent",
+              "D. Property broker"
+            ],
+            "correct_answer": "C",
+            "explanation": "Based on Page 1: 'In Northern America, this intermediary is referred to as a real estate agent... whilst in the United Kingdom, the intermediary would be referred to as an estate agent.'"
+          },
+          {
+            "id": 7,
+            "type": "Concept",
+            "question": "Studies on housing price determinants primarily examine the impacts of which attributes?",
+            "options": [
+              "A. Political, economic, and social attributes",
+              "B. Structural, locational, and environmental attributes",
+              "C. Historical, cultural, and aesthetic attributes",
+              "D. Legal, financial, and administrative attributes"
+            ],
+            "correct_answer": "B",
+            "explanation": "Based on Page 1: 'There have been various studies to detect the determinants of housing prices to this day, mostly trying to examine the impacts of structural, locational and environmental attributes of houses.'"
+          },
+          {
+            "id": 8,
+            "type": "Concept",
+            "question": "How is a real estate transaction defined according to the provided text?",
+            "options": [
+              "A. The construction of new commercial or residential premises",
+              "B. The calculation of property taxes owed to the government",
+              "C. The process whereby rights in a unit of property are transferred between parties",
+              "D. The marketing of a property by an intermediary for a commission"
+            ],
+            "correct_answer": "C",
+            "explanation": "Based on Page 1: 'A real estate transaction is the process whereby rights in a unit of property (or designated real estate) are transferred between two or more parties...'"
+          },
+          {
+            "id": 9,
+            "type": "Concept",
+            "question": "Which factors are cited as contributing to the complexity of real estate transactions?",
+            "options": [
+              "A. The lack of available intermediaries and low market demand",
+              "B. The complexity of property rights, the amount of money exchanged, and government regulations",
+              "C. The simplicity of environmental attributes and structural designs",
+              "D. The uniformity of conventions across different countries"
+            ],
+            "correct_answer": "B",
+            "explanation": "Based on Page 1: 'It can often be quite complicated due to the complexity of the property rights being transferred, the amount of money being exchanged, and government regulations.'"
+          },
+          {
+            "id": 10,
+            "type": "Concept",
+            "question": "What methodology was used to compare process models in the ‘Modelling Real Property Transactions’ research action?",
+            "options": [
+              "A. Ontology-based methodology",
+              "B. Cost-benefit analysis",
+              "C. Statistical hypothesis testing",
+              "D. Qualitative interview analysis"
+            ],
+            "correct_answer": "A",
+            "explanation": "Based on Page 1: 'Process models were compared through an ontology-based methodology'"
+          }
+        ],
+        "evidence_used": {
+          "quantitative_anchors": [
+            {
+              "statement": "The Organisation for Economic Co-operation and Development (OECD) conducted a study commissioned by the European Commission to address transaction costs.",
+              "source_quote": "To identify and possibly reduce these transaction costs, the Organisation for Economic Co-operation and Development (OECD) addressed the issue through a study commissioned by the European Commission and through a research action.",
+              "location": "[=== PAGE 1 START ===]"
+            },
+            {
+              "statement": "National property transaction costs were specifically estimated for Finland and Denmark using the System of National Accounts.",
+              "source_quote": "national property transaction costs were estimated for Finland and Denmark based on the directions of the System of National Accounts.",
+              "location": "[=== PAGE 1 START ===]"
+            },
+            {
+              "statement": "The research action utilized two specific formats for describing transactions: a Basic Use Case template and the Unified Modeling Language.",
+              "source_quote": "Descriptions were performed both using a more simple format, a Basic Use Case template, and more advanced applications of the Unified Modeling Language.",
+              "location": "[=== PAGE 1 START ===]"
+            },
+            {
+              "statement": "The study covers subdivision, conveyance, and mortgaging transactions across the five Nordic countries.",
+              "source_quote": "Real estate transactions: subdivision, conveyance, and mortgaging, as they are performed in the five Nordic countries, are described in some detail.",
+              "location": "[=== PAGE 1 START ===]"
+            },
+            {
+              "statement": "An English translation of the transaction descriptions is specifically available for the Danish section.",
+              "source_quote": "A translation into English is available for the Danish part.",
+              "location": "[=== PAGE 1 START ===]"
+            }
+          ],
+          "qualitative_key_points": [
+            {
+              "statement": "The real estate business encompasses the profession of buying, leasing, managing, or selling various types of premises, including commercial and residential.",
+              "source_quote": "Real estate business is the profession of buying, leasing, managing, or selling real estate (commercial, indus- trial, residential, or mixed-use premises).",
+              "location": "[=== PAGE 1 START ===]"
+            },
+            {
+              "statement": "Intermediaries provide sales and marketing support for a commission, with professional titles varying by region (e.g., 'realtor' in North America vs. 'estate agent' in the UK).",
+              "source_quote": "It is common practice for an intermediary to provide real estate owners with dedicated sales and marketing support in exchange for commission. In Northern America, this intermediary is referred to as a real estate agent... whilst in the United Kingdom, the intermediary would be referred to as an estate agent.",
+              "location": "[=== PAGE 1 START ===]"
+            },
+            {
+              "statement": "Research on housing price determinants primarily focuses on the impacts of structural, locational, and environmental attributes.",
+              "source_quote": "There have been various studies to detect the determinants of housing prices to this day, mostly trying to examine the impacts of structural, locational and environmental attributes of houses.",
+              "location": "[=== PAGE 1 START ===]"
+            },
+            {
+              "statement": "A real estate transaction is defined as the process of transferring property rights between parties, such as sellers and buyers.",
+              "source_quote": "A real estate transaction is the process whereby rights in a unit of property (or designated real estate) are transferred between two or more parties, e.g., in the case of conveyance, one party being the seller(s) and the other being the buyer(s).",
+              "location": "[=== PAGE 1 START ===]"
+            },
+            {
+              "statement": "Transactions are complicated by the nature of property rights, high financial values, and government regulations, which vary significantly across jurisdictions.",
+              "source_quote": "It can often be quite complicated due to the complexity of the property rights being transferred, the amount of money being exchanged, and government regulations. Conventions and requirements also vary considerably among different countries",
+              "location": "[=== PAGE 1 START ===]"
+            },
+            {
+              "statement": "The 'Modelling Real Property Transactions' action aimed to formalize transaction descriptions to enable cross-border comparisons using ontology-based methodology.",
+              "source_quote": "The mentioned research action ‘Modelling Real Property Transactions’investigated methods to describe se- lected transactions in a formal way to allow for comparisons across countries and jurisdictions... Process models were compared through an ontology-based methodology",
+              "location": "[=== PAGE 1 START ===]"
             }
           ]
         }

@@ -1,0 +1,50 @@
+{
+    "input_path": "/Users/yunqiaoy/Code/PPT_Coder/PPT_Product_Generation/NotebookLM/high/modern_architecture/slide_images/slide_0001.png",
+    "page_index": null,
+    "boxes": [
+        {
+            "cls_id": 1,
+            "label": "image",
+            "score": 0.9624149799346924,
+            "coordinate": [
+                111.8116455078125,
+                105.24606323242188,
+                2753.474609375,
+                1068.2218017578125
+            ]
+        },
+        {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.9314790964126587,
+            "coordinate": [
+                372.2916564941406,
+                1321.9610595703125,
+                2122.13037109375,
+                1469.5037841796875
+            ]
+        },
+        {
+            "cls_id": 14,
+            "label": "footer",
+            "score": 0.8082400560379028,
+            "coordinate": [
+                2639.015625,
+                1553.342041015625,
+                2841.699462890625,
+                1578.0048828125
+            ]
+        },
+        {
+            "cls_id": 10,
+            "label": "doc_title",
+            "score": 0.7916859984397888,
+            "coordinate": [
+                379.1104431152344,
+                1126.184814453125,
+                2438.920654296875,
+                1237.8150634765625
+            ]
+        }
+    ]
+}
