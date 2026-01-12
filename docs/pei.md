@@ -37,7 +37,7 @@ The evaluation process begins with **Input Format Analysis**, which determines t
 
 ## 3. The PEI Hierarchy: Detailed Definitions
 This section defines the technical criteria for each level.
-![alt text](output_03_副本2.png)
+![alt text](../images/pipeline.png)
 ### Phase 0: The Flat Phase
 #### **Level 0: Static (The Flat Image)** 🖼️
 *   **Definition:** The content is indistinguishable from a static bitmap.
@@ -45,7 +45,7 @@ This section defines the technical criteria for each level.
 *   **Critical Failure Condition:** Text is unselectable; individual elements cannot be isolated.
 
 <figure>
-  <img src="image-1.png" alt="L0 NotebookLM as an uneditable PDF example">
+  <img src="../images/image-1.png" alt="L0 NotebookLM as an uneditable PDF example">
   <figcaption>Level 0: Static (Uneditable PDF)</figcaption>
 </figure>
 
@@ -57,8 +57,8 @@ This section defines the technical criteria for each level.
     *   **No Text Reflow:** Editing text causes it to overlap other elements instead of wrapping.
     *   **Fragmentation:** A 5-line paragraph is represented by 5 separate text objects.
 <figure>
-  <img src="image-3.png" alt="L0 NotebookLM as an uneditable PDF example">
-  <img src="image-2.png" alt="L0 NotebookLM as an uneditable PDF example">
+  <img src="../images/image-3.png" alt="L0 NotebookLM as an uneditable PDF example">
+  <img src="../images/image-2.png" alt="L0 NotebookLM as an uneditable PDF example">
   <figcaption>Level 1: Patchwork (OCR text and a broken backgroud)</figcaption>
 </figure>
 
@@ -70,8 +70,8 @@ This section defines the technical criteria for each level.
     *   **Isolation:** Complex graphics (e.g., an icon + label) are not Grouped, requiring users to move them individually.
     *   *(Note: This is the hard ceiling for URL inputs).*
 <figure>
-  <img src="image-4.png" alt="L0 NotebookLM as an uneditable PDF example">
-  <img src="image-5.png" alt="L0 NotebookLM as an uneditable PDF example">
+  <img src="../images/image-4.png" alt="L0 NotebookLM as an uneditable PDF example">
+  <img src="../images/image-5.png" alt="L0 NotebookLM as an uneditable PDF example">
   <figcaption>Level 2: Vector (SVG Path and Scalable Primitives)</figcaption>
 </figure>
 
@@ -84,9 +84,9 @@ This section defines the technical criteria for each level.
 *   **Critical Failure Condition (Knockout):**
     *   **Hardcoded Layouts:** Every slide background is drawn independently; the Master Slide is blank or unused.
 <figure>
-  <img src="image-6.png" alt="L0 NotebookLM as an uneditable PDF example">
+  <img src="../images/image-6.png" alt="L0 NotebookLM as an uneditable PDF example">
   <figcaption>Origin slides(show the use of grouping)</figcaption>
-  <img src="image-7.png" alt="L0 NotebookLM as an uneditable PDF example">
+  <img src="../images/image-7.png" alt="L0 NotebookLM as an uneditable PDF example">
   <figcaption>Master of the origin slides</figcaption>
   <figcaption>Level 3: Strucural (Use Master and Grouping)</figcaption>
 </figure>
@@ -100,7 +100,7 @@ This section defines the technical criteria for each level.
     *   Charts are "drawn" (Vector shapes) instead of "generated" (Data objects).
     *   "Edit Data" workflow is broken or missing.### Phase 3: The Experience Phase (Time & Narrative)
 <figure>
-  <img src="image-8.png" alt="L0 NotebookLM as an uneditable PDF example">
+  <img src="../images/image-8.png" alt="L0 NotebookLM as an uneditable PDF example">
   <figcaption>Level 4:Parametric  (Native data in the chart )(Human-made)</figcaption>
 </figure>
 
@@ -116,7 +116,7 @@ This section defines the technical criteria for each level.
 
 ## 4. Evaluation Protocols
 Select the protocol below matching your input type.
-![alt text](image-pro.png)
+![alt text](../images/image-pro.png)
 ### Protocol A: The Static Flow 
 **Input:** PDF / Image
 **Procedure:**

@@ -15,7 +15,7 @@ Metrics included:
 - Visual HRV - Presentation pacing based on RMSSD
 
 Author: PPT Evaluation System
-"
+"""
 
 import base64
 import gc
@@ -2492,7 +2492,7 @@ def main():
     parser.add_argument(
         "--metrics",
         type=str,
-        default=None,
+        default="figure_ground_contrast,color_harmony,colorfulness,subband_entropy",
         help=(
             "Comma-separated list of metrics to compute per slide. "
             "Example: lab,hsv,visual_complexity,subband_entropy. "

@@ -8,15 +8,42 @@ Script to calculate quiz accuracy statistics across different dimensions:
 
 import json
 import csv
+import argparse
 from collections import defaultdict
 from pathlib import Path
 
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description='Calculate quiz accuracy statistics from quantitative evaluation results'
+    )
+    parser.add_argument(
+        '--input',
+        type=str,
+        required=True,
+        help='Path to quantitative results JSON file'
+    )
+    parser.add_argument(
+        '--quiz-data',
+        type=str,
+        required=True,
+        help='Path to quiz data JSON file (e.g., final_revise.json)'
+    )
+    parser.add_argument(
+        '--output',
+        type=str,
+        default='results',
+        help='Output directory for CSV files (default: results)'
+    )
+    return parser.parse_args()
+
+args = parse_args()
+
 # Load the data files
 print("Loading data files...")
-with open('/Users/yunqiaoy/Code/PPT_Coder/PPT_Eval_A/Evaluation/System/results/quantitative_results/quantitative_results_20260105_183612.json', 'r') as f:
+with open(args.input, 'r') as f:
     quant_results = json.load(f)
 
-with open('/Users/yunqiaoy/Code/PPT_Coder/PPT_Eval_A/final_revise.json', 'r') as f:
+with open(args.quiz_data, 'r') as f:
     final_revise = json.load(f)
 
 # Create a mapping from filename to document info in final_revise
@@ -243,7 +270,7 @@ complexity_averages = {
 }
 
 # Output results to CSV files
-output_dir = Path('/Users/yunqiaoy/Code/PPT_Coder/PPT_Eval_A/Evaluation/System/results')
+output_dir = Path(args.output)
 output_dir.mkdir(parents=True, exist_ok=True)
 
 print("\n=== Writing CSV files ===")

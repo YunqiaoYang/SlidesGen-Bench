@@ -44,7 +44,7 @@ In this paper, we introduce **SlideGen-Bench**, a benchmark designed to evaluate
 | ✅ **Reliability** | High correlation with human preference via the SlideGen-Align dataset |
 
 <p align="center">
-  <img src="images/main-pipeline.pdf" alt="Main Pipeline" width="800">
+  <img src="images/main-pipeline.jpg" alt="Main Pipeline" width="800">
 </p>
 
 ---
@@ -64,7 +64,12 @@ pip install -r requirements.txt
 
 Configure **PaddleOCR DocLayout Detection** for layout analysis:
 - 📖 [PaddleOCR Documentation](https://www.paddleocr.ai/latest/version3.x/module_usage/layout_detection.html#_4)
-- We use the `PP-DocLayout_plus-L` model
+- We use the `PP-DocLayout_plus-L` model.
+
+📑 PPTX to Image Conversion
+
+For PPTX files, we use **LibreOffice** for conversion:
+- 📖 [Official LibreOffice Documentation](https://www.libreoffice.org/get-help/documentation/)
 
 ---
 
@@ -75,29 +80,22 @@ Configure **PaddleOCR DocLayout Detection** for layout analysis:
 Convert all slide formats into images to ensure a unified evaluation framework.
 
 <details>
-<summary><b>🖼️ Image Conversion</b></summary>
+<b>🖼️ Image Conversion</b>
 
 We provide a converting script for preprocessing:
 
 ```bash
-python eval/pre_process.py --input /path/to/slides --output /path/to/images
+python eval/pre_process.py --ppt-gen-root ./examples/Slides
 ```
 
 For pipelines that do not directly output images:
 
 ```bash
-python eval/process_zhipu.py  # Example script - adapt to your pipeline
+python eval/process_zhipu.py  --product-dir zhipu-product-dir # Example script - adapt to your pipeline
 ```
 
 </details>
 
-<details>
-<summary><b>📑 PPTX to Image Conversion</b></summary>
-
-For PPTX files, we use **LibreOffice** for conversion:
-- 📖 [Official LibreOffice Documentation](https://www.libreoffice.org/get-help/documentation/)
-
-</details>
 
 ---
 
@@ -107,10 +105,10 @@ Evaluate content quality using the **QuizBank** methodology:
 
 ```bash
 # Run content evaluation
-python eval/quantitative_eval.py --eval-mode content_only --provider openai
+python eval/quantitative_eval.py --products Kimi-Standard Kimi-Smart Kimi-Banana NotebookLM Quake Zhipu Gamma Skywork Skywork-Banana --source-mode all --eval-mode content_only --use-grids --workers 4
 
 # Calculate quiz accuracy and generate results
-python eval/calculate_quiz_accuracy.py --input results/content_eval.json --output results/accuracy_table.csv
+python eval/calculate_quiz_accuracy.py --input results/content_eval.json --quiz-data dataset/slidegen-test.json --output results
 ```
 
 ---
@@ -136,8 +134,7 @@ python eval/aesthetics_metrics.py IMAGE_PATH [OPTIONS]
 **Example Usage:**
 
 ```bash
-python eval/quantitative_eval.py --eval-mode aesthetics_only \
-    --aesthetics-metrics figure_ground_contrast,color_harmony,colorfulness,subband_entropy
+python eval/quantitative_eval.py --eval-mode aesthetics_only --products Your_product
 ```
 
 > 📖 For detailed configuration, see [Aesthetics Configuration Guide](docs/Aesthetics_config.md)
@@ -159,7 +156,7 @@ We also provide LLM-based evaluation methods:
 
 Evaluate presentation editability using a **knock-out evaluation strategy** — assessing how well generated presentations can be edited and modified after creation.
 
-> 📄 **Reference:** [PEI Evaluation Protocol](eval/pei.md)
+> 📄 **Reference:** [PEI Evaluation Protocol](docs/pei.md)
 
 ---
 
@@ -171,7 +168,93 @@ Evaluate presentation editability using a **knock-out evaluation strategy** — 
 | 🎨 **Aesthetics** | Computational | `aesthetics_metrics.py` | Objective visual metrics |
 | 🎨 **Aesthetics** | LLM Rating | `quantitative_eval.py --eval-mode visual_only` | LLM-based scoring |
 | 🎨 **Aesthetics** | LLM Arena | `arena_eval.py` | Pairwise ELO ranking |
-| ✏️ **Editability** | PEI Knock-out | [PEI Protocol](docs/PEI(2).pdf) | Edit capability assessment |
+| ✏️ **Editability** | PEI Knock-out | [PEI Protocol](docs/pei.md) | Edit capability assessment |
+
+---
+
+## 🔧 Adding Your Own Products
+
+You can easily extend SlideGen-Bench to evaluate your own slide generation product by following these steps:
+
+### 1️⃣ Configure Product Settings
+
+Add your product configuration to `eval/eval_config.py` in the `PRODUCTS` dictionary:
+
+```python
+PRODUCTS = {
+    # ... existing products ...
+    "YourProduct": {
+        "directory": "YourProduct",           # Folder name in ppt_gen_root
+        "input_format": "pptx",               # Format: "pptx" or "pdf"
+        "description": "Your product description",
+        "structure": "difficulty/topic/name", # Directory structure
+        "has_slide_images": False,            # Set True if images pre-extracted
+    },
+}
+```
+
+### 2️⃣ Organize Your Slides
+
+Structure your generated slides following the specified format:
+
+```
+ppt_gen_root/
+└── YourProduct/
+    └── {difficulty}/              # e.g., topic_introduction, work_report
+        └── {topic}/               # e.g., AI, Climate_Change
+            └── slides.pptx        # Your generated presentation
+```
+
+**Supported difficulties:**
+- `topic_introduction`
+- `work_report`
+- `business_plan`
+- `brand_promote`
+- `personal_statement`
+- `product_launch`
+- `course_preparation`
+
+### 3️⃣ Preprocess Slides
+
+Convert your slides to images for unified evaluation:
+
+```bash
+# For PPTX files
+python eval/pre_process.py --ppt-gen-root ./your_slides_folder --products YourProduct
+
+# For custom formats, adapt the conversion script:
+# python eval/process_custom.py --product-dir your_product_dir
+```
+
+### 4️⃣ Run Evaluation
+
+Evaluate your product using the benchmark:
+
+```bash
+# Content evaluation
+python eval/quantitative_eval.py \
+  --products YourProduct \
+  --eval-mode content_only \
+  --workers 4
+
+# Aesthetics evaluation
+python eval/quantitative_eval.py \
+  --products YourProduct \
+  --eval-mode aesthetics_only
+
+# Full evaluation
+python eval/quantitative_eval.py \
+  --products YourProduct \
+  --source-mode all \
+  --workers 4
+```
+
+### 📌 Tips
+
+- ✅ Ensure slide images are stored in `{ppt_path}_images/` folders
+- ✅ Use consistent naming conventions across topics
+- ✅ Set `has_slide_images: True` if you've already extracted slide images
+- ✅ Test with a small subset before running full evaluation
 
 ---
 
@@ -212,15 +295,15 @@ We release **SlideGen-Align**, a human preference dataset for evaluating AI-gene
 
 | Product | Provider | Description |
 |:--------|:---------|:------------|
-| **Gamma** | Gamma.app | 🎨 AI presentation maker |
+| **Gamma** | Gamma.com.ai | 🎨 AI presentation maker |
 | **NotebookLM** | Google | 📓 AI notebook with presentation generation |
 | **Kimi-Standard** | Moonshot AI | 🌙 Kimi (standard mode) |
 | **Kimi-Smart** | Moonshot AI | 🧠 Kimi (smart mode) |
 | **Kimi-Banana** | Moonshot AI | 🍌 Kimi (Banana template) |
-| **Skywork** | Kunlun Tech | 🌤️ Skywork AI |
-| **Skywork-Banana** | Kunlun Tech | 🍌 Skywork (Banana template) |
+| **Skywork** | SKYWORK.ai  | 🌤️ Skywork AI |
+| **Skywork-Banana** | SKYWORK.ai  | 🍌 Skywork (Banana template) |
 | **Zhipu** | Zhipu AI | 🤖 Presentation generator |
-| **Quake** | ByteDance | ⚡ Quake presentation tool |
+| **Quark** | Quark AI | ⚡ Quake presentation tool |
 
 ### 📂 Scenario Categories
 
