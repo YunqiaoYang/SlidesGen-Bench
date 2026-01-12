@@ -148,7 +148,7 @@ Select the protocol below matching your input type.
 **Step 3: Protocol Termination**
 *   *Reasoning:* Web views cannot reliably prove the existence of Master Slides or editable Excel data.
 *   *Final Classification:* **Level 2 (Vector).**
----
+
 
 ### Protocol C: The PPTx Flow
 **Input:** PPTX File
