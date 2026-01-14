@@ -1,0 +1,59 @@
+\begin{table}[t]
+\centering
+\footnotesize
+% \setlength{\tabcolsep}{6pt} % 调整列间距
+
+\resizebox{\columnwidth}{!}{\begin{tabular}{l ccccc >{\columncolor{colHighlight}}c } % 给 PEI Level 列加背景色
+\toprule
+% 表头行
+\textbf{System} & 
+\textbf{T1} & \textbf{T2} & \textbf{T3} & \textbf{T4} & \textbf{T5} & 
+\textbf{PEI} \\
+
+% 副表头 (解释 T1-T5)
+% \rowcolor{white} % 覆盖背景色
+% \scriptsize\textit{(Core Metric)} & 
+% \scriptsize\textit{Text Sep.} & 
+% \scriptsize\textit{Vector} & 
+% \scriptsize\textit{Structural} & 
+% \scriptsize\textit{Parametic} & 
+% \scriptsize\textit{Cinematic} & 
+% \scriptsize\textit{(Ours)} & 
+% \scriptsize\textit{Score} \\
+
+\midrule
+
+% --- L2 Group ---
+\textbf{Quark}           & \cmark & \cmark & \cmark & \xmark & \xmark & \textbf{L3} \\
+
+\arrayrulecolor{black!10}\midrule % 极细的浅灰分割线
+\arrayrulecolor{black} % 恢复黑色
+
+\textbf{Gamma}           & \cmark & \cmark & \xmark & \xmark & \xmark & \textbf{L2}  \\
+\textbf{Skywork}         & \cmark & \cmark & \xmark & \xmark & \xmark & \textbf{L2}  \\
+\textbf{Kimi (Standard)} & \cmark & \cmark & \xmark & \xmark & \xmark & \textbf{L2} \\
+\textbf{Kimi (Smart)}    & \cmark & \cmark & \xmark & \xmark & \xmark & \textbf{L2}  \\
+\textbf{Zhipu}   & \cmark & \cmark & \xmark & \xmark & \xmark & \textbf{L2} \\
+
+\arrayrulecolor{black!10}\midrule % 极细的浅灰分割线
+\arrayrulecolor{black} % 恢复黑色
+
+% --- L1 Group ---
+\textbf{Kimi (Banana)}           & \cmark & \xmark & \xmark & \xmark & \xmark & \textbf{L1}  \\
+\textbf{Skywork (Banana)}& \cmark & \xmark & \xmark & \xmark & \xmark & \textbf{L1} \\
+
+\arrayrulecolor{black!10}\midrule
+\arrayrulecolor{black}
+
+% --- L0 Group (重点对比对象) ---
+\textbf{NotebookLM}      & \xmark & \xmark & \xmark & \xmark & \xmark & \textbf{L0} \\
+
+
+\bottomrule
+\end{tabular}}
+
+\caption{\textbf{Evaluation Results against the PEI Framework.} 
+Columns T1--T5 represent the hierarchical pass/fail criteria (\cmark/\xmark). 
+}
+\label{tab:pei_results}
+\end{table}

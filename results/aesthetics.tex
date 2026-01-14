@@ -1,0 +1,25 @@
+\begin{table*}[htb]
+    \small
+    \centering
+    % Adjusted colsep to fit columns gracefully
+    \setlength{\tabcolsep}{8.0pt} 
+    % Updated column definition: Removed Avg. Rank column
+    \begin{NiceTabular}{l|cccc:c}
+         \toprule
+         {\bf Product} & {\bf Usability} ($\uparrow$) & {\bf Engagement} ($\uparrow$) & {\bf Harmony} ($\uparrow$) & {\bf Rhythm} ($\uparrow$) & {\bf Aesthetics} ($\uparrow$) \\
+         \midrule
+         % Highlighting the top performer (Skywork-Banana)
+         \rowcolor{gray!7} Skywork-Banana & 5.62 & \textbf{8.30} & -0.47 & 13.84 & \textbf{27.28} \\
+         \rowcolor{white} Kimi-Banana & \textbf{5.72} & 6.41 & -0.55 & \textbf{15.01} & 26.58 \\
+         \rowcolor{white} NotebookLM & 4.13 & 7.32 & \textbf{-0.35} & 11.72 & 22.82 \\
+         \rowcolor{white} Zhipu & 4.87 & 7.52 & -1.60 & 11.27 & 22.06 \\
+         \rowcolor{white} Skywork & 4.83 & 7.60 & -1.18 & 9.44 & 20.69 \\
+         \rowcolor{white} Kimi-Standard & 4.61 & 6.28 & -1.75 & 10.12 & 19.25 \\
+         \rowcolor{white} Kimi-Smart & 4.13 & 7.99 & -1.88 & 8.06 & 18.30 \\
+         \rowcolor{white} Gamma & 5.31 & 6.31 & -1.51 & 6.99 & 17.09 \\
+         \rowcolor{white} Quark & 5.03 & 7.41 & -1.91 & 6.33 & 16.86 \\
+         \bottomrule
+    \end{NiceTabular}
+    \caption{Slides Aesthetics evaluation results. We report detailed component scores ($\uparrow$) including Usability, Engagement, Harmony, and Rhythm. The total score, Aesthetics, is shown in the last column. The table is sorted by the Aesthetics score. Best results are highlighted in \textbf{bold}.}
+    \label{tab:aesthetics_eval}
+\end{table*}
