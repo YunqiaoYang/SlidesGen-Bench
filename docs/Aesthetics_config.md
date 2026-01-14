@@ -51,26 +51,26 @@ The aesthetics scoring can be customized via a JSON config file. See `aesthetics
 {
   "parameters": {
     "weight_contrast": 7,
-    "weight_colorfulness": 9,
-    "weight_colorfulness_score": 0.65,
-    "w_colorfulness_mean": 17,
-    "w_colorfulness_std": 6,
-    "weight_colorfulness_pacing": 0.6,
-    "w_colorfulness_target": 9.5,
-    "w_colorfulness_target_std": 4,
-    "weight_harmony": 0.2,
+    "weight_colorfulness": 10,
+    "weight_colorfulness_score": 0.55,
+    "w_colorfulness_mean": 26,
+    "w_colorfulness_std": 40,
+    "weight_colorfulness_pacing": 0.5,
+    "w_colorfulness_target": 15,
+    "w_colorfulness_target_std": 6,
+    "weight_harmony": 0.4,
     "weight_harmony_mean": 5,
-    "weight_harmony_deck": 30,
+    "weight_harmony_deck": 20,
     "harmony_sigma": 0.0005,
-    "weight_subband_entropy": 0.1,
-    "weight_subband_entropy_score": 50,
-    "w_subband_entropy_mean": 4.9,
-    "w_subband_entropy_std": 1.5,
-    "weight_target_rmssd": 0.02,
-    "weight_target_halfwidth": 0.1,
-    "se_k": 1.7,
-    "se_mu": 2.6
-  }
+    "weight_subband_entropy": 0.08,
+    "weight_subband_entropy_score": 100,
+    "w_subband_entropy_mean": 5.4,
+    "w_subband_entropy_std": 1.6,
+    "weight_target_rmssd": 0.03,
+    "weight_target_halfwidth": 0.21,
+    "se_k": 1.5,
+    "se_mu": 2.1
+  },
 }
 ```
 
@@ -86,35 +86,35 @@ The aesthetics scoring can be customized via a JSON config file. See `aesthetics
 
 | Parameter | Description | Default |
 |-----------|-------------|---------|
-| `weight_colorfulness` | Weight for colorfulness metric | 9.0 |
-| `weight_colorfulness_score` | Score multiplier | 0.65 |
-| `w_colorfulness_mean` | Target mean colorfulness | 17.0 |
-| `w_colorfulness_std` | Standard deviation for Gaussian scoring | 6.0 |
-| `weight_colorfulness_pacing` | Pacing weight for slide-to-slide variation | 0.6 |
-| `w_colorfulness_target` | Target colorfulness pacing (std) | 9.5 |
-| `w_colorfulness_target_std` | Target pacing standard deviation | 4.0 |
+| `weight_colorfulness` | Weight for colorfulness metric | 10.0 |
+| `weight_colorfulness_score` | Score multiplier | 0.55 |
+| `w_colorfulness_mean` | Target mean colorfulness | 26.0 |
+| `w_colorfulness_std` | Standard deviation for Gaussian scoring | 40.0 |
+| `weight_colorfulness_pacing` | Pacing weight for slide-to-slide variation | 0.5 |
+| `w_colorfulness_target` | Target colorfulness pacing (std) | 15.0 |
+| `w_colorfulness_target_std` | Target pacing standard deviation | 6.0 |
 
 #### Color Harmony
 
 | Parameter | Description | Default |
 |-----------|-------------|---------|
-| `weight_harmony` | Weight for color harmony metric | 0.2 |
+| `weight_harmony` | Weight for color harmony metric | 0.4 |
 | `weight_harmony_mean` | Mean harmony weight | 5.0 |
-| `weight_harmony_deck` | Deck-level harmony weight | 30.0 |
+| `weight_harmony_deck` | Deck-level harmony weight | 20.0 |
 | `harmony_sigma` | Sigma for harmony score normalization | 0.0005 |
 
 #### Subband Entropy & Visual HRV
 
 | Parameter | Description | Default |
 |-----------|-------------|---------|
-| `weight_subband_entropy` | Weight for entropy metric | 0.1 |
-| `weight_subband_entropy_score` | Entropy score multiplier | 50.0 |
-| `w_subband_entropy_mean` | Target mean entropy | 4.9 |
-| `w_subband_entropy_std` | Entropy standard deviation | 1.5 |
-| `weight_target_rmssd` | Target RMSSD for visual HRV | 0.02 |
-| `weight_target_halfwidth` | Half-width for RMSSD scoring | 0.1 |
-| `se_k` | Sigmoid slope for entropy normalization | 1.7 |
-| `se_mu` | Sigmoid midpoint for entropy | 2.6 |
+| `weight_subband_entropy` | Weight for entropy metric | 0.08 |
+| `weight_subband_entropy_score` | Entropy score multiplier | 100.0 |
+| `w_subband_entropy_mean` | Target mean entropy | 5.4 |
+| `w_subband_entropy_std` | Entropy standard deviation | 1.6 |
+| `weight_target_rmssd` | Target RMSSD for visual HRV | 0.03 |
+| `weight_target_halfwidth` | Half-width for RMSSD scoring | 0.21 |
+| `se_k` | Sigmoid slope for entropy normalization | 1.5 |
+| `se_mu` | Sigmoid midpoint for entropy | 2.1 |
 
 ---
 

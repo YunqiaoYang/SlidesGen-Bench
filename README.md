@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/logo.png" alt="SlideGen-Bench Logo" width="400">
+  <img src="images/logo.png" alt="SlidesGen-Bench Logo" width="400">
 </p>
 
 <p align="center">
@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://huggingface.co/datasets/Yqy6/SlideGen-Align">
+  <a href="https://huggingface.co/datasets/Yqy6/Slides-Align">
     <img src="https://img.shields.io/badge/🤗%20Dataset-SlideGen--Align-yellow" alt="Dataset">
   </a>
   <a href="#license">
@@ -25,7 +25,7 @@
   <a href="#-abstract">Abstract</a> •
   <a href="#-installation">Installation</a> •
   <a href="#-evaluation-pipeline">Evaluation</a> •
-  <a href="#-slidegen-align-dataset">Dataset</a> •
+  <a href="#-Slides-Align-dataset">Dataset</a> •
   <a href="#-license">License</a>
 </p>
 
@@ -35,13 +35,13 @@
 
 The rapid evolution of Large Language Models (LLMs) has fostered diverse paradigms for automated slide generation, ranging from code-driven layouts to image-centric synthesis. However, evaluating these heterogeneous systems remains challenging, as existing protocols often struggle to provide comparable scores across architectures or rely on uncalibrated judgments.
 
-In this paper, we introduce **SlideGen-Bench**, a benchmark designed to evaluate slide generation through a lens of three core principles:
+In this paper, we introduce **SlidesGen-Bench**, a benchmark designed to evaluate slide generation through a lens of three core principles:
 
 | Principle | Description |
 |:---------:|:------------|
 | 🌐 **Universality** | Unified visual-domain evaluation framework agnostic to generation methods |
 | 📊 **Quantification** | Reproducible metrics across *Content*, *Aesthetics*, and *Editability* |
-| ✅ **Reliability** | High correlation with human preference via the SlideGen-Align dataset |
+| ✅ **Reliability** | High correlation with human preference via the Slides-Align dataset |
 
 <p align="center">
   <img src="images/main-pipeline.jpg" alt="Main Pipeline" width="800">
@@ -53,8 +53,8 @@ In this paper, we introduce **SlideGen-Bench**, a benchmark designed to evaluate
 
 ```bash
 # Clone the repository
-git clone https://github.com/yunqiaoyang/SlideGen-Bench.git
-cd SlideGen-Bench
+git clone https://github.com/yunqiaoyang/SlidesGen-Bench.git
+cd SlidesGen-Bench
 
 # Install dependencies
 pip install -r requirements.txt
@@ -174,7 +174,7 @@ Evaluate presentation editability using a **knock-out evaluation strategy** — 
 
 ## 🔧 Adding Your Own Products
 
-You can easily extend SlideGen-Bench to evaluate your own slide generation product by following these steps:
+You can easily extend SlidesGen-Bench to evaluate your own slide generation product by following these steps:
 
 ### 1️⃣ Configure Product Settings
 
@@ -266,18 +266,18 @@ Configuration options can be set via:
 
 ---
 
-## 📊 SlideGen-Align Dataset
+## 📊 Slides-Align Dataset
 
 <p align="center">
-  <a href="https://huggingface.co/datasets/Yqy6/SlideGen-Align">
+  <a href="https://huggingface.co/datasets/Yqy6/Slides-Align">
     <img src="https://huggingface.co/datasets/huggingface/badges/resolve/main/dataset-on-hf-sm.svg" alt="Dataset on HF">
   </a>
 </p>
 
-We release **SlideGen-Align**, a human preference dataset for evaluating AI-generated slide presentations.
+We release **Slides-Align**, a human preference dataset for evaluating AI-generated slide presentations.
 
 <p align="center">
-  🤗 <a href="https://huggingface.co/datasets/Yqy6/SlideGen-Align"><b>huggingface.co/datasets/Yqy6/SlideGen-Align</b></a>
+  🤗 <a href="https://huggingface.co/datasets/Yqy6/Slides-Align"><b>huggingface.co/datasets/Yqy6/Slides-Align</b></a>
 </p>
 
 ### 📈 Dataset Statistics
@@ -344,7 +344,7 @@ We release **SlideGen-Align**, a human preference dataset for evaluating AI-gene
 from datasets import load_dataset
 
 # Load from Hugging Face
-dataset = load_dataset("Yqy6/SlideGen-Align")
+dataset = load_dataset("Yqy6/Slides-Align")
 
 # Access the data
 for item in dataset['train']:
@@ -360,5 +360,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <p align="center">
-  <i>If you find SlideGen-Bench useful, please consider giving us a ⭐!</i>
+  <i>If you find SlidesGen-Bench useful, please consider giving us a ⭐!</i>
 </p>
