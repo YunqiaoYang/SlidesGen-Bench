@@ -7,17 +7,17 @@
 </p>
 
 <p align="center">
+  <a href="https://arxiv.org/abs/2601.09487">
+    <img src="https://img.shields.io/badge/📄%20Paper-arXiv-b31b1b" alt="Paper">
+  </a>
   <a href="https://huggingface.co/datasets/Yqy6/Slides-Align">
-    <img src="https://img.shields.io/badge/🤗%20Dataset-SlideGen--Align-yellow" alt="Dataset">
+    <img src="https://img.shields.io/badge/🤗%20Dataset-Slides--Align-yellow" alt="Dataset">
+  </a>
+  <a href="https://slidesgenbench.yqy314.top/">
+    <img src="https://img.shields.io/badge/🌐%20Homepage-Website-blue" alt="Homepage">
   </a>
   <a href="#license">
     <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
-  </a>
-  <a href="https://www.python.org/downloads/">
-    <img src="https://img.shields.io/badge/Python-3.8+-blue.svg" alt="Python">
-  </a>
-  <a href="#installation">
-    <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg" alt="PRs Welcome">
   </a>
 </p>
 
@@ -353,7 +353,25 @@ for item in dataset['train']:
 
 ---
 
-## 📜 License
+## � Citation
+
+If you find SlidesGen-Bench useful in your research, please consider citing our paper:
+
+```bibtex
+@misc{yang2026slidesgenbenchevaluatingslidesgeneration,
+      title={SlidesGen-Bench: Evaluating Slides Generation via Computational and Quantitative Metrics}, 
+      author={Yunqiao Yang and Wenbo Li and Houxing Ren and Zimu Lu and Ke Wang and Zhiyuan Huang and Zhuofan Zong and Mingjie Zhan and Hongsheng Li},
+      year={2026},
+      eprint={2601.09487},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2601.09487}, 
+}
+```
+
+---
+
+## �📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
