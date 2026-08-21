@@ -7,6 +7,10 @@
 </p>
 
 <p align="center">
+  <b>✅ Accepted at EMNLP 2026 (Main Conference)</b>
+</p>
+
+<p align="center">
   <a href="https://arxiv.org/abs/2601.09487">
     <img src="https://img.shields.io/badge/📄%20Paper-arXiv-b31b1b" alt="Paper">
   </a>
