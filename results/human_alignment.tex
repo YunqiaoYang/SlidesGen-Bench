@@ -1,0 +1,20 @@
+\begin{table}[htb]
+    \footnotesize
+    \centering
+    % \setlength{\tabcolsep}{12.0pt}
+    \begin{NiceTabular}{l|ccc}
+         \toprule
+         \multirow{2}{*}{\bf Method} & \multicolumn{2}{c}{\bf Spearman} & {\bf Identical} \\
+          & {\bf Avg($\uparrow$)} & {\bf Std} ($\downarrow$)  &  {\bf Avg($\uparrow$)} \\
+         \midrule
+         \rowcolor{gray!7} \method & \textbf{0.71} & \textbf{0.16} & \textbf{32.6} \\
+         \rowcolor{white!7} LLM-as-Judge Rating & 0.57 & 0.23 & 20.7 \\
+         \rowcolor{white!7} LLM-as-Judge Arena & 0.52 & 0.27 & 17.3 \\
+         \rowcolor{white!7} PPTAgent & 0.53 & 0.26 & 17.8 \\
+         \midrule
+         \rowcolor{white!7} Humans & 0.85 & 0.12 & 45.3 \\
+         \bottomrule
+    \end{NiceTabular}
+    \caption{Human alignment results on SlidesGen-Bench.}
+    \label{tab:SlidesGen_results}
+\end{table}

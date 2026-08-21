@@ -1,19 +1,19 @@
 # Aesthetics Evaluation Configuration Guide
 
-This document provides detailed configuration options for the computational aesthetics evaluation in SlideGen-Bench.
+This document provides detailed configuration options for the computational aesthetics evaluation in SlidesGen-Bench.
 
 ---
 
 ## Overview
 
-The aesthetics evaluation module computes four core metrics to assess visual quality:
+The aesthetics evaluation module computes four core metrics to assess visual quality. These correspond to the four dimensions of the paper — Harmony, Engagement, Usability, and Visual Rhythm:
 
-| Metric | Description |
-|--------|-------------|
-| **Figure-Ground Contrast** | Measures contrast between foreground and background using WCAG standards |
-| **Color Harmony** | Computes distance to harmonic color templates based on color theory |
-| **Colorfulness** | Measures image colorfulness using Hasler & Süsstrunk's method |
-| **Subband Entropy & Visual HRV** | Analyzes visual complexity and temporal consistency across slides |
+| Paper Dimension | Metric | Description |
+|:----------------|:-------|:------------|
+| **Harmony** | **Color Harmony** | Computes distance to harmonic color templates based on color theory |
+| **Engagement** | **Colorfulness** | Measures image colorfulness using Hasler & Süsstrunk's method |
+| **Usability** | **Figure-Ground Contrast** | Measures contrast between foreground and background using WCAG standards |
+| **Visual Rhythm** | **Subband Entropy & Visual HRV** | Analyzes visual complexity and temporal consistency across slides |
 
 ---
 
@@ -32,7 +32,7 @@ python quantitative_eval.py \
 # With custom configuration
 python quantitative_eval.py \
     --eval-mode aesthetics_only \
-    --aesthetics-config aesthetics_config/aesthetics_config.json \
+    --aesthetics-config eval/aesthetics_config.json \
     --products Gamma
 
 # Evaluate specific topics
@@ -45,7 +45,7 @@ python quantitative_eval.py \
 
 ## Configuration File
 
-The aesthetics scoring can be customized via a JSON config file. See `aesthetics_config/aesthetics_config.json` for an example:
+The aesthetics scoring can be customized via a JSON config file. See `eval/aesthetics_config.json` for an example:
 
 ```json
 {
@@ -155,7 +155,7 @@ from aesthetics_metrics import (
 )
 
 # Load custom parameters
-params = load_parameters_from_config("aesthetics_config/aesthetics_config.json")
+params = load_parameters_from_config("eval/aesthetics_config.json")
 
 # Create calculator
 calculator = SlideAestheticsCalculator()

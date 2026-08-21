@@ -97,7 +97,7 @@ PRODUCTS = {
     "Quake": {
         "directory": "Quake",
         "input_format": "pptx",
-        "description": "Quake presentation generator",
+        "description": "Quark PPT (Quark AI) presentation generator",
         "structure": "difficulty/topic/name",
     },
 }
